@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="navigation-bar">
+                    <a href="#user-input">Home</a>
+                </li>
+                <li class="navigation-bar">
+                    <a href="#why-travel">why-travel</a>
+                </li>
+                <li class="navigation-bar">
+                    <a href="#about">about</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="user-input">
+        <h1>Website name</h1>
+        <form class="find-deal">
+            <ul>
+                <li class="boxing">
+                    <input type="text" id="user-location" placeholder="From">
+                </li>
+                <li class="boxing">
+                    <input type="text" id="user-destination" placeholder="To">
+                </li>
+                <li class="boxing">
+                    <button type="submit" class="submit-find">Let's Go!</button>
+                </li>
+            </ul>
+        </form>
+    </section>
+    <section class="js-result">
+        <h2>Choose your flight and hotel</h2>
+        <table class="table-flight">
+            <tr>
+                <th>
+                    Price ($)
+                </th>
+                <th>
+                    Departure Flight
+                </th>
+                <th>
+                    From
+                </th>
+                <th>
+                    Returning Flight
+                </th>
+                <th>
+                    From
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    1200
+                </th>
+                <th>
+                    United
+                </th>
+                <th>
+                    LAX
+                </th>
+                <th>
+                    American Airlines
+                </th>
+                <th>
+                    SFO
+                </th>
+                <th>
+                    <button>Add</button>
+                </th>
+            </tr>
+        </table>
+        <iframe id="stay22-widget" width="100%" height="360" src="https://www.stay22.com/embed/gm?lat=40.7505045&lng=-73.9934387&title=Madison%20Square%20Garden" frameborder="0"></iframe>
+        <section id="accomodation-and-foods">
+            <form class="accomodation-input">
+                <div class="question">Where are you going to stay?</div>
+                <input class="test" type="radio" name="accomodation" value="AirBnB" checked> AirBnB
+                <input class="test" type="radio" name="accomodation" value="Hotel"> Hotel
+                <input class="test" type="radio" name="accomodation" value="Apartment"> Apartment
+                <input class="test" type="radio" name="accomodation" value="Townhouse"> Townhouse
+                <input class="test" type="radio" name="accomodation" value="Shared Room"> Shared Room
+                <input class="test" type="radio" name="accomodation" value="Friend's/Relative's House"> Friend's/Relative's House
+                <div class="question">How much are you going to pay?</div>
+                <span>$</span>
+                <input type="text" class="acommodation-value"><span>/night</span>
+                <button>Enter!!</button>
+            </form>
+            <form class="food-transportation">
+                <span>7x</span>
+                <span>7x</span>
+                <span>7x</span>
+                <span>7x</span>
+                <div>7x a day, Extremely Foodie!!</div>
+                <span>7x</span>
+                <input type="text" id="food-per-day">
+                <span>/day = </span>
+                <span>Calculation here ask marius</span>
+                <button>Enter!!</button>
+            </form>
+        </section>
+    </section>
+    <section id="why-travel">
+        <h1>Why is travelling important?</h1>
+        <div class="why">We believe that traveling is good for you. It helps people to experience a new culture, make new friends, learn new languages, and most importantly helps people to open their mind. So pack your bags and get ready for the new adventures ahead.</div>
+        <img src="some-picture.jpg" alt="" class="logo">
+    </section>
+    <section id="about">
+        <h1>About</h1>
+        <img src="some-picture.jpg" alt="" class="logo">
+        <div class="explanation">[appname] will guide people to estimate their allowance and help them to find the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them. We hope that people will understand that travelling is not that time and money consuming as it used to be
+        </div>
+    </section>
+
+    <footer>
+        <div>Created by Andreas Adinata</div>
+        <ul>
+            <li class="personal-information">Github</li>
+            <li class="personal-information">Linkedin</li>
+            <li class="personal-information">Gmail</li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="client.js"></script>
+</body>
+
+</html>

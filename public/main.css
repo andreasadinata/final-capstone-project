@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    padding: 5px;
+/*    border: 1px solid black;*/
+}
+
+nav {
+    display: inline-block;
+}
+
+section {
+    text-align: center;
+}
+
+.boxing {
+    list-style: none;
+    display: inline-block;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.boxing:last-child {
+    border: 0px;
+}
+
+.find-deal {
+    text-align: center;
+    width: 100%;
+}
+
+.find-deal input {
+    display: inline-block;
+    width: 100px;
+    margin: 0px;
+    border: none;
+}
+
+table {
+    border-spacing: 10px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr,
+th {
+    padding: 10px;
+    font-size: 15px;
+}
+
+li {
+    list-style: none;
+}
+
+#stay22-widget {
+    display: block;
+}
+
+.test {
+    display: inline-block;
+}
+
+.accomodation-input {
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.food-transportation {
+    border: 1px solid black;
+}
+
+.why-travel {
+    text-align: center;
+}
+
+.why,
+.explanation {
+    text-align: left;
+    width: 50%;
+    display: inline-block;
+}
+
+.about {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.personal-information {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+.navigation-bar {
+    list-style: none;
+    display: inline-block;
+}
