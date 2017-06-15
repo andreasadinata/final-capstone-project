@@ -16,6 +16,12 @@ const PlanSchema = mongoose.Schema({
     returnDate: {
         type: String
     },
+    flightInbound: {
+        type: String
+    },
+    flightOutbound: {
+        type: Number
+    },
     flightPrice: {
         type: Number
     },
@@ -31,7 +37,16 @@ const PlanSchema = mongoose.Schema({
     foodPrice: {
         type: Number
     },
-    transportationUtilities: {
+    souvenirs: {
+        type: Number
+    },
+    utilities: {
+        type: Number
+    },
+    emergencyMoney: {
+        type: Number
+    },
+    transportation: {
         type: Number
     }
 }, {
@@ -50,12 +65,17 @@ PlanSchema.methods.apiRepr = function () {
         destinationLocation: this.destinationLocation,
         departureDate: this.departureDate,
         returnDate: this.returnDate,
+        flightInbound: this.flightInbound,
+        flightOutbound: this.flightOutbound,
         flightPrice: this.flightPrice,
         roomType: this.roomType,
         roomPrice: this.roomPrice,
         foodFrequency: this.foodFrequency,
         foodPrice: this.foodPrice,
-        transportationUtilities: this.transportationUtilities
+        transportation: this.transportation,
+        souvenirs: this.souvenirs,
+        utilities: this.utilities,
+        emergencyMoney: this.emergencyMoney,
     };
 }
 

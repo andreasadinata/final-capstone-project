@@ -91,9 +91,71 @@ app.get('/flight/:originLocation/:destinationLocation/:departureDate/:returnDate
     searchReq.on('error', function (code) {
         res.sendStatus(code);
     });
-
 });
 
+//----------Plan from the database------------
+//get plan from database
+app.get('/plan', function (req, res) {
+    Comment.find(function (err, items) {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error'
+            });
+        }
+        res.status(200).json(items);
+    });
+});
+//post plan to database
+app.post('/post-plan', function (req, res) {
+    var requiredFields = ['title', 'originLocation', 'destinationLocation', 'departureDate', 'returnDate', 'flightPrice', 'roomType', 'roomPrice', 'foodFrequency', 'transportation', 'souvenirs', 'utilities', 'emergencyMoney'];
+    for (var i = 0; i < requiredFields.length; i++) {
+        var field = requiredFields[i];
+        if (!(field in req.body)) {
+            var message = `Missing \`${field}\` in request body`
+            console.error(message);
+            return res.status(400).send(message);
+        }
+    }
+    Plan.create({
+        title: req.body.title,
+        originLocation: req.body.originLocation,
+        destinationLocation: req.body.destinationLocation,
+        departureDate: req.body.departureDate,
+        returnDate: req.body.returnDate,
+        flightPrice: req.body.flightPrice,
+        roomType: req.body.roomType,
+        roomPrice: req.body.roomPrice,
+        foodFrequency: req.body.foodFrequency,
+        foodPrice: req.body.foodPrice,
+        transportation: req.body.transportation,
+        souvenirs: req.body.foodPrice,
+        utilities: req.body.foodPrice,
+        emergencyMoney: req.body.foodPrice
+    }, function (err, item) {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error'
+            });
+        }
+        res.status(201).json(item);
+    });
+});
+
+//app.delete('/delete-comment/:id', function (req, res) {
+//    Comment.findByIdAndRemove(req.params.id)
+//        .exec()
+//        .then(() => {
+//        res.status(204).json({
+//            message: 'success'
+//        });
+//    })
+//        .catch(err => {
+//        console.error(err);
+//        res.status(500).json({
+//            error: 'something went terribly wrong'
+//        });
+//    });
+//});
 
 
 module.exports = {

@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
     padding: 5px;
-/*    border: 1px solid black;*/
+    font-size: 18px;
+    /*    border: 1px solid black;*/
 }
 
 nav {
@@ -100,4 +101,9 @@ footer {
 .navigation-bar {
     list-style: none;
     display: inline-block;
+}
+
+.help-chart {
+    display: inline-block;
+    border: 1px solid black;
 }
