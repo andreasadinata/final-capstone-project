@@ -60,9 +60,18 @@ function closeServer() {
 
 //use emitter to get data from external API
 function getData(originLocation, destinationLocation, departureDate, returnDate) {
+    //convert date to external API format
+    console.log(departureDate);
+    console.log(returnDate);
+    //    var dateDepartureArrayContainer = departureDate.split('/');
+    //    var dateReturnArrayContainer = departureDate.split('/');
+    //    var newDateDeparture = dateDepartureArrayContainer[3] + "/" + dateDepartureArrayContainer[1] + "/" + dateDepartureArrayContainer[2];
+    //    var newDateReturn = dateReturnArrayContainer[3] + "/" + dateReturnArrayContainer[1] + "/" + dateReturnArrayContainer[2];
+    //    console.log(newDateDeparture);
+    //    console.log(newDateReturn);
     var emitter = new events.EventEmitter();
-    //    dont forget change the sfo lax date etc
-    unirest.get('http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/US/usd/en-US/SFOA/LAXA/2017-06-30/2017-07-04?apikey=prtl6749387986743898559646983194')
+
+    unirest.get('http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/US/usd/en-US/' + originLocation + '/' + destinationLocation + '/' + departureDate + '/' + returnDate + '?apikey=prtl6749387986743898559646983194')
         .header("Accept", "application/json")
         .end(function (result) {
             if (result.ok) {
@@ -96,7 +105,7 @@ app.get('/flight/:originLocation/:destinationLocation/:departureDate/:returnDate
 //----------Plan from the database------------
 //get plan from database
 app.get('/plan', function (req, res) {
-    Comment.find(function (err, items) {
+    Plan.find(function (err, items) {
         if (err) {
             return res.status(500).json({
                 message: 'Internal Server Error'
@@ -141,21 +150,21 @@ app.post('/post-plan', function (req, res) {
     });
 });
 
-//app.delete('/delete-comment/:id', function (req, res) {
-//    Comment.findByIdAndRemove(req.params.id)
-//        .exec()
-//        .then(() => {
-//        res.status(204).json({
-//            message: 'success'
-//        });
-//    })
-//        .catch(err => {
-//        console.error(err);
-//        res.status(500).json({
-//            error: 'something went terribly wrong'
-//        });
-//    });
-//});
+app.delete('/delete-plan/:id', function (req, res) {
+    Plan.findByIdAndRemove(req.params.id)
+        .exec()
+        .then(() => {
+            res.status(204).json({
+                message: 'success'
+            });
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json({
+                error: 'something went terribly wrong'
+            });
+        });
+});
 
 
 module.exports = {
