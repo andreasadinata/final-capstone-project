@@ -1,13 +1,25 @@
-# Merrython
+# PLANIT
 Thinkful (https://www.thinkful.com/) Final portofolio project. Using SkyScanner's API to help user calculate their travelling cost.
 
-![home-page](https://github.com/andreasadinata/merrython/blob/master/public/screenshot/Homepage.png)
+![home-page](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.20.15.png)
 
-![results-page]
+![people's-plan](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.20.44.png)
 
-![Comment-section]
+![why-travelling](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.21.01.png)
 
-![After-comment-section]
+![about-PLANIT](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.21.12.png)
+
+![flight-not-found](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.22.08.png)
+
+![flight-found](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.22.51.png)
+
+![accomodation](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.23.07.png)
+
+![food-transportation](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.23.16.png)
+
+![input-title](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.23.51.png)
+
+![plan-submitted](https://github.com/andreasadinata/final-capstone-project/blob/master/public/screenshot/Screenshot%202017-06-27%2018.24.23.png)
 
 ## Introduction
 I came up with the name PLANIT because of the two words "Plan" and "It". Personally, I love to spend most of my long weekend

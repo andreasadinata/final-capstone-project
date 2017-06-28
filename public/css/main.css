@@ -1,0 +1,834 @@
+/*general css design*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+    font-size: 18px;
+    font-family: Overpass;
+    /*    border: 1px solid grey;*/
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.a-exclude {
+    color: white!important;
+    text-decoration: none;
+}
+
+.a-exclude:visited {
+    color: white!important;
+    text-decoration: none;
+}
+
+section {
+    text-align: center;
+    width: 100%;
+}
+
+li {
+    /*    padding: 1%;*/
+    text-align: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/*user input homepage*/
+
+.wrapper-home {
+    background-image: url(../assets/images/transparent.jpg);
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.transparent {
+    background-image: url(../assets/images/22466.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 20%;
+    background-attachment: inherit;
+    opacity: 0.9;
+}
+
+.logo-1 {
+    font-family: Permanent Marker;
+    font-size: 90px;
+    color: white;
+}
+
+.logo-2 {
+    font-family: Permanent Marker;
+    font-size: 80px;
+    color: white;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.mirror {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+#user-input {
+    height: 530px;
+    padding-top: 30px;
+    /*    border: 1px solid black;*/
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.submit-effect {
+    width: 100%;
+    display: inline-block;
+}
+
+.city-origin-select .city-destination-select {
+    vertical-align: center;
+}
+
+.caption {
+    list-style: none;
+    width: 30%;
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding: 1%;
+}
+
+.input-boxing {
+    list-style: none;
+    display: inline-block;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    width: 30%;
+    text-align: center;
+    vertical-align: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 1%;
+}
+
+.input-boxing-last-row {
+    list-style: none;
+    display: inline-block;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    vertical-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 1%;
+}
+
+.middle-row {
+    width: 100%;
+}
+
+.departureDate,
+.returnDate {
+    width: 100%;
+    border-radius: 3px;
+    padding-left: 10px;
+    height: 27px;
+    font-size: 16px;
+    vertical-align: center;
+}
+
+.city-origin-select,
+.city-destination-select {
+    width: 100%;
+}
+
+.submit-find {
+    background: none!important;
+    border-radius: 3px;
+    border: 1px solid white;
+    padding: 5px!important;
+    cursor: pointer;
+    color: white;
+    margin-top: 30px;
+}
+
+.last-row {
+    margin-top: 10px;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+}
+
+.js-flight-not-found {
+    display: block;
+    margin-left: auto;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+    width: 80%;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+.js-flight-not-found button {
+    display: inline-block;
+    background: none!important;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 5px!important;
+    cursor: pointer;
+    color: black;
+    margin-top: 35px;
+    width: 15%;
+}
+
+
+/*People's Plan*/
+
+.wrapper-bottom {
+    width: 100%;
+    /*    background-color: #F2F3F3;*/
+    background-color: white;
+}
+
+.js-people-plan {
+    padding-top: 40px;
+    /*    border: 1px solid black;*/
+    height: 600px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.js-people-plan h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.wrapper-background-plan-boxes {
+    background-image: url(../assets/images/transparent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    height: 375px;
+}
+
+.js-plan-boxes-2,
+.js-plan-boxes-1,
+.js-plan-boxes-0 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 20%;
+    background-attachment: inherit;
+    border: 0.1px solid black;
+    border-radius: 3px;
+    width: 32%;
+    display: inline-block;
+    margin: 5px;
+    height: 375px;
+    color: white;
+    opacity: 0.9;
+}
+
+.js-plan-boxes-2 {
+    background-image: url(../assets/images/sf.gif);
+}
+
+.js-plan-boxes-1 {
+    background-image: url(../assets/images/travel-road-highway-animated-gif-1.gif);
+}
+
+.js-plan-boxes-0 {
+    background-image: url(../assets/images/tumblr_mwqi6lEfo31r2afqho1_r1_500.gif);
+}
+
+.plan-box-title {
+    padding-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.plan-box-total-money {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.js-date-plan-boxes,
+.js-flight-plan-boxes {
+    text-align: center;
+}
+
+.date-js-plan {
+    font-size: 13px;
+}
+
+.location-left,
+.location-right {
+    width: 40%;
+    text-align: center;
+    display: inline-block;
+}
+
+.fa {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.box-left {
+    width: 42%;
+    text-align: center;
+    display: inline-block;
+}
+
+.box-middle {
+    width: 5%;
+    text-align: center;
+    display: inline-block;
+}
+
+.box-right {
+    width: 42%;
+    text-align: center;
+    display: inline-block;
+}
+
+.js-delete-box {
+    background: none!important;
+    border-radius: 3px;
+    border: 1px solid white;
+    padding: 5px!important;
+    cursor: pointer;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+/****Result****/
+
+.js-result {
+    padding-top: 25px;
+    width: 100%;
+    /*    background-color: #4996ED;*/
+    background-color: #F2F3F3;
+    margin-bottom: 20px;
+}
+
+
+/*flight result*/
+
+.js-flight {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    /*    padding-top: 40px;*/
+    height: 300px;
+    background-image: url(../assets/images/70403300-airport-wallpapers.jpg);
+    background-position: 30% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    color: white;
+    opacity: 0.9;
+}
+
+.js-flight-wrapper-transp {
+    padding-top: 40px;
+    background-image: url(../assets/images/transparent.jpg);
+    height: 300px;
+    color: white;
+}
+
+.js-flight h2 {
+    margin-bottom: 30px;
+}
+
+.js-flight-button {
+    margin-top: 10px;
+}
+
+.js-flight-button button {
+    display: inline-block;
+    background: none!important;
+    border-radius: 3px;
+    border: 1px solid white;
+    padding: 5px!important;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    width: 15%;
+    margin: 5px;
+}
+
+.flight-format {
+    padding: 1%;
+    width: 19%;
+    text-align: center;
+    display: inline-block;
+}
+
+.padding {
+    margin: 0.2%;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*stay22*/
+
+#stay22-widget {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px solid black
+}
+
+
+/*accomodation input*/
+
+.accomodation-input {
+    margin-top: 30px;
+    border: 0.5px solid black;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../assets/images/transparent.jpg);
+    color: white;
+}
+
+.layer-accomodation-input-transp {
+    background-image: url(../assets/images/39d45f7f902c3f8fade020257209284a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 50%;
+    background-attachment: inherit;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-1 {
+    margin-top: 27.5px;
+    margin-bottom: 20px;
+}
+
+.question-2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.accomodation-type {
+    width: 7%;
+    display: inline-block;
+    text-align: left;
+}
+
+.accomodation-input input {
+    margin-bottom: 25px;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+
+/*transportation and food */
+
+.food-information,
+.other-spend {
+    width: 48.57%;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    /*    border: 1px solid black;*/
+    height: 260px;
+}
+
+.acc-food-wrapper {
+    margin-top: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mid-margin {
+    width: 1%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+
+/*food*/
+
+.help-chart {
+    display: inline-block;
+    border: 1px solid white;
+    width: 50%;
+    vertical-align: top;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.help-chart h1 {
+    margin-bottom: 5px;
+}
+
+.layer-transp-food h1,
+.Other {
+    color: white;
+    padding-top: 7px;
+    /*
+    margin-top: 10px;
+margin-bottom: 10px;
+*/
+}
+
+.layer-transp-food,
+.layer-transp-other {
+    background-image: url(../assets/images/transparent.jpg);
+    background-size: cover;
+    height: 260px;
+    border: 0.5px solid black;
+}
+
+.layer-transp-food ul {
+    margin-top: 20px;
+}
+
+.food-information {
+    background-image: url(../assets/images/imagefood.jpeg);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 20%;
+    background-attachment: inherit;
+    color: white;
+}
+
+.other-spend {
+    background-image: url(../assets/images/IMG_97071.jpg);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40% 50%;
+    background-attachment: inherit;
+    color: white;
+}
+
+.input-food {
+    border-radius: 3px;
+    display: inline-block;
+    width: 41%;
+    vertical-align: top;
+    color: white;
+    border-radius: 3px;
+}
+
+.input-food input {
+    border: 0.5px solid black;
+    border-radius: 3px;
+}
+
+#food-frequency,
+#food-per-day {
+    display: inline-block;
+    width: 80%;
+    padding: 2px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.fa-cutlery,
+.fa-calculator {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+/*transportation*/
+
+.js-breakdown-plan-boxes ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box-left-other {
+    width: 35%;
+    text-align: left;
+    display: inline-block;
+}
+
+.box-middle-other {
+    width: 5%;
+    text-align: center;
+    display: inline-block;
+}
+
+.box-right-other {
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+}
+
+.box-right-other input {
+    width: 80%;
+    border: 0.5px solid black;
+    border-radius: 3px;
+}
+
+#accomodation-and-foods button {
+    background: none!important;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 5px!important;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    width: 10%;
+}
+
+
+/*summary*/
+
+.js-summary {
+    padding-bottom: 50px;
+}
+
+.wrapper-background-plan-boxes-summary {
+    background-image: url(../assets/images/transparent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    height: 320px;
+    margin-bottom: 30px;
+    border: 0.1px solid black;
+    border-radius: 3px;
+}
+
+.wrapper-background-plan-boxes-summary h1 {
+    padding-top: 12px;
+}
+
+.js-plan-boxes-summary {
+    background-image: url(../assets/images/giphy-2dfvdfv.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 20%;
+    background-attachment: inherit;
+    width: 32%;
+    display: inline-block;
+    margin: 5px;
+    height: 320px;
+    color: white;
+    opacity: 0.9;
+    border-radius: 3px;
+}
+
+#title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0.5px solid black;
+    padding: 5px;
+}
+
+.initiate-post {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 25px;
+    background: none!important;
+    border-radius: 3px;
+    border: 1px solid white;
+    padding: 5px!important;
+    cursor: pointer;
+    color: white;
+}
+
+
+/*thankyou*/
+
+.wrapper-thank-you {
+    background-image: url(../assets/images/transparent.jpg);
+    height: 120px;
+    margin-top: 30px;
+    border: 0.1px solid black;
+    border-radius: 3px;
+    font-size: 20px;
+    padding-top: 40px;
+}
+
+.thank-you {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 120px;
+    opacity: 0.9;
+    background-image: url(../assets/images/sunrise.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    background-position: 50% 50%;
+    color: white;
+    /*    background-color: black;*/
+}
+
+
+/*why-travel*/
+
+#why-travel {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 300px;
+    padding-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+#why-travel h1 {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.why {
+    font-size: 18px;
+    text-align: left;
+    width: 38%;
+    display: inline-block;
+    line-height: 300%;
+}
+
+.image-why {
+    margin-left: 40px;
+    height: 260px;
+    width: 450px;
+}
+
+.explanation {
+    font-size: 18px;
+    text-align: right;
+    width: 38%;
+    display: inline-block;
+    line-height: 300%;
+}
+
+
+/*about the app*/
+
+#about {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 500px;
+    padding-top: 20px;
+}
+
+#about h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.image-about {
+    width: 400px;
+    height: 300px;
+}
+
+
+/*personal information*/
+
+footer {
+    padding-top: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #F2F3F3;
+    padding-bottom: 20px;
+}
+
+footer div {
+    margin-bottom: 10px;
+}
+
+.personal-information {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.gmail:hover {
+    color: darkred;
+    cursor: pointer;
+}
+
+.linkedin:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.github:hover {
+    color: rebeccapurple;
+    cursor: pointer;
+}
+
+
+/*responsive*/
+
+@media only screen and (max-width: 800px) {
+    .thank-you div {
+        font-size: 15px;
+        padding: 25px;
+    }
+    .comment-list {
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        display: block;
+    }
+}

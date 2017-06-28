@@ -20,7 +20,7 @@ const PlanSchema = mongoose.Schema({
         type: String
     },
     flightOutbound: {
-        type: Number
+        type: String
     },
     flightPrice: {
         type: Number

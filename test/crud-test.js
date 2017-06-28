@@ -33,21 +33,21 @@ function seedPlanData() {
 function generateData() {
     data = {
         title: faker.lorem.words(),
-        //        originLocation: faker.address.zipCode(),
-        //        destinationLocation: faker.address.zipCode(),
-        //        departureDate: faker.address.zipCode(),
-        //        returnDate: faker.address.zipCode(),
-        //        flightInbound: this.flightInbound,
-        //        flightOutbound: this.flightOutbound,
-        flightPrice: faker.random.number,
-        //        roomType: this.roomType,
-        roomPrice: faker.random.number,
-        foodFrequency: faker.random.number,
-        foodPrice: faker.random.number,
-        transportation: faker.random.number,
-        souvenirs: faker.random.number,
-        utilities: faker.random.number,
-        emergencyMoney: faker.random.number
+        originLocation: faker.address.city(),
+        destinationLocation: faker.address.city(),
+        departureDate: faker.date.future(),
+        returnDate: faker.date.future(),
+        flightInbound: faker.lorem.words(),
+        flightOutbound: faker.lorem.words(),
+        flightPrice: faker.random.number(),
+        roomType: faker.lorem.words(),
+        roomPrice: faker.random.number(),
+        foodFrequency: faker.random.number(),
+        foodPrice: faker.random.number(),
+        transportation: faker.random.number(),
+        souvenirs: faker.random.number(),
+        utilities: faker.random.number(),
+        emergencyMoney: faker.random.number()
 
     };
     return data;
@@ -76,7 +76,7 @@ describe('active-test', function () {
     describe('test GET endpoint', function () {
         it('should list all the data', function () {
             return chai.request(app)
-                .get('/active')
+                .get('/plan')
                 .then(function (_res) {
                     res = _res;
                     res.should.have.status(200);
