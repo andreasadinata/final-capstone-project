@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Playfair Display|Overpass|Permanent Marker' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/logo-5.png">
 </head>
 
 <body>
@@ -32,54 +33,63 @@
 </header>
 -->
             <section id="user-input">
-                <h1 class="logo">Planit</h1>
+                <h1 class="logo-1">Planit</h1>
+                <h2>Plan your trip with FlightScanner API</h2>
+                <span class="logo-2">Planit</span>
                 <form class="find-deal">
-                    <ul class="first-row">
-                        <li class="caption">Origin</li>
-                        <li class="caption">Destination</li>
-                    </ul>
-                    <ul class="middle-top-row">
-                        <li class="input-boxing">
-                            <i class="fa fa-plane" aria-hidden="true"></i>
-                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            <select class="city-origin-select">
-                                <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
-                                <option value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
-                                <option value="New York_40.7128_-74.0059_NYC">New York</option>
-                                <option value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
-                                <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
-                            </select>
-                        </li>
-                        <li class="input-boxing">
-                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                            <i class="fa fa-plane mirror" aria-hidden="true"></i>
-                            <select class="city-destination-select">
-                                <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
-                                <option value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
-                                <option value="New York_40.7128_-74.0059_NYC">New York</option>
-                                <option value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
-                                <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
-                            </select>
-                        </li>
-                    </ul>
-                    <ul class="middle-bottom-row">
-                        <li class="input-boxing">
-                            <i class="fa fa-calendar" aria-hidden="true"></i> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            <input class="departureDate" placeholder="Departure Date" type="text" id="datepickerDeparture">
-                        </li>
-                        <li class="input-boxing">
-                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input class="returnDate" placeholder="Return Date" type="text" id="datepickerReturn">
-                        </li>
-                    </ul>
+                    <div class="submit-effect">
+                        <ul class="first-row">
+                            <li class="caption">Origin</li>
+                            <li class="caption">Destination</li>
+                        </ul>
+                        <ul class="middle-top-row">
+                            <li class="input-boxing">
+                                <!--
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+-->
+                                <select class="city-origin-select">
+                                    <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
+                                    <option value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
+                                    <option value="New York_40.7128_-74.0059_NYC">New York</option>
+                                    <option selected="selected" value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
+                                    <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
+                                </select>
+                            </li>
+                            <li class="input-boxing">
+                                <!--
+                                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                <i class="fa fa-plane mirror" aria-hidden="true"></i>
+-->
+                                <select class="city-destination-select">
+                                    <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
+                                    <option selected="selected" value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
+                                    <option value="New York_40.7128_-74.0059_NYC">New York</option>
+                                    <option value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
+                                    <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <ul class="middle-bottom-row">
+                            <li class="input-boxing">
+                                <!--                                <i class="fa fa-calendar" aria-hidden="true"></i> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>-->
+                                <input class="departureDate" required placeholder="Departure Date" type="text" id="datepickerDeparture">
+                            </li>
+                            <li class="input-boxing">
+                                <!--
+                                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+<i class="fa fa-calendar" aria-hidden="true"></i>
+-->
+                                <input class="returnDate" required placeholder="Return Date" type="text" id="datepickerReturn">
+                            </li>
+                        </ul>
+                    </div>
                     <ul class="last-row">
-                        <li class="input-boxing">
-                            <button type="submit" class="submit-find" onclick="window.location.href='#js-flight-anchor'">Let's Go!</button>
-
-                            <!--                            <button type="submit" class="submit-find"><a class=a-exclude href="#js-flight">Let's Go!</a></button>-->
+                        <li class="input-boxing-last-row">
+                            <button type="submit" class="submit-find">Let's Go!</button>
                         </li>
                     </ul>
+
                 </form>
             </section>
         </section>
@@ -131,7 +141,7 @@
                     <input class="accomodation-type" type="radio" name="accomodation" value="Shared Room"> Shared Room
                     <div class="question-2">How much are you going to pay?</div>
                     <span>$</span>
-                    <input type="number" placeholder="Cost" class="acommodation-value"><span>/night</span>
+                    <input type="number" min="0" required placeholder="Cost" class="acommodation-value"><span>/night</span>
                 </div>
             </div>
             <ul class="acc-food-wrapper">
@@ -149,10 +159,10 @@
                             <li class="input-food">
                                 <i class="fa fa-cutlery" aria-hidden="true"></i>
                                 <span>$</span>
-                                <input type="number" placeholder="Food Price" id="food-per-day">
+                                <input type="number" required placeholder="Food Price" id="food-per-day" min="0">
                                 <i class="fa fa-calculator" aria-hidden="true"></i>
                                 <span>X</span>
-                                <input type="number" placeholder="/day" id="food-frequency">
+                                <input type="number" required placeholder="/day" id="food-frequency" min="0">
                             </li>
                         </ul>
                     </div>
@@ -168,7 +178,7 @@
                                     <i class="fa fa-ship" aria-hidden="true"></i></li>
                                 <li class="box-middle-other">:</li>
                                 <li class="box-right-other">$
-                                    <input type="number" placeholder=" Transportation" id="transportation">
+                                    <input type="number" required placeholder=" Transportation" id="transportation" min="0">
                                 </li>
                             </ul>
                             <ul>
@@ -177,7 +187,7 @@
                                     <i class="fa fa-gamepad" aria-hidden="true"></i></li>
                                 <li class="box-middle-other">:</li>
                                 <li class="box-right-other">$
-                                    <input type="number" placeholder=" Utilities" id="utilities">
+                                    <input type="number" required placeholder=" Utilities" id="utilities" min="0">
                                 </li>
                             </ul>
                             <ul>
@@ -187,7 +197,7 @@
                                     <i class="fa fa-credit-card-alt" aria-hidden="true"></i></li>
                                 <li class="box-middle-other">:</li>
                                 <li class="box-right-other">$
-                                    <input type="number" placeholder=" Emergency Money" id="emergency-money">
+                                    <input type="number" required placeholder=" Emergency Money" id="emergency-money" min="0">
                                 </li>
                             </ul>
                             <ul>
@@ -196,19 +206,22 @@
                                     <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
                                 <li class="box-middle-other">:</li>
                                 <li class="box-right-other">$
-                                    <input type="number" placeholder=" Souvenirs" id="souvenirs">
+                                    <input type="number" required placeholder=" Souvenirs" id="souvenirs" min="0">
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </li>
             </ul>
-
             <button>Enter!!</button>
         </form>
         <section class="js-summary">
-
         </section>
+    </section>
+    <section class="thank-you">
+        <div class="wrapper-thank-you">
+            Thank you for sharing with us!!
+        </div>
     </section>
     <section class="wrapper-bottom">
         <section class="js-people-plan">
@@ -220,12 +233,12 @@
         <section id="why-travel">
             <h1>Why is travelling important?</h1>
             <div class="why">Travelling helps people to experience a new culture, make new friends, learn new languages, and most importantly helps people to open their mind. So pack your bags and get ready for the new adventures ahead.</div>
-            <img src="44799.png" class="image-why">
+            <img src="images/Globe-And-Travelling-Icons.png" class="image-why">
         </section>
         <section id="about">
             <h1>About</h1>
-            <img src="Image.png" class="image-about">
-            <div class="explanation">PLANIT will guide people to estimate their allowance and help them to find the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
+            <img src="images/Image.png" class="image-about">
+            <div class="explanation">PLANIT will guide people to estimate their allowance and help them to research the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
             </div>
         </section>
     </section>

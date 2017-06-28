@@ -1,11 +1,13 @@
 //state for temporary data
 var state = {};
 
+
+
 //find the difference in date
 function diffDate(departureDate, returnDate) {
     var departureDateUnix = new Date(departureDate).getTime() / 1000;
     var returnDateUnix = new Date(returnDate).getTime() / 1000;
-    var output = parseInt((Math.abs(returnDateUnix - departureDateUnix)) / 86400);
+    var output = parseInt((returnDateUnix - departureDateUnix) / 86400);
     return output;
 }
 
@@ -20,13 +22,10 @@ function displaySummarySubmit() {
     var otherMoney = +state["emergencyMoney"] + +(state["souvenirs"]) + +(state["transportation"]) + +(state["utilities"]);
     var foodMoney = ((state["foodPrice"]) * (state["foodFrequency"]));
     var totalMoney = (state["flightPrice"]) + (nights * (state["roomPrice"])) + otherMoney + (days * foodMoney);
-    console.log((state["flightPrice"]) + (nights * (state["roomPrice"])) + otherMoney + (days * foodMoney));
-
-
     buildHtmlOutput += '<div class="js-plan-boxes-summary">';
     buildHtmlOutput += '<form class="wrapper-background-plan-boxes-summary">'
     buildHtmlOutput += '<h1>Review and share this plan with the others.</h1>'
-    buildHtmlOutput += '<input type="text" class="title" placeholder="input title">'
+    buildHtmlOutput += '<input type="text" id="title" required placeholder="input title">'
     buildHtmlOutput += '<h2>Total Price:</h2>';
     buildHtmlOutput += '<div class="plan-box-total-money">$ ' + totalMoney + ' </div>';
     buildHtmlOutput += '<div class="js-flight-plan-boxes">';
@@ -188,10 +187,24 @@ function postPlanToDatabase(state) {
             url: '/post-plan'
         })
         .done(function (result) {
+            $('.thank-you').show();
+            $('.js-flight-not-found').hide();
+            $('.js-summary').hide();
+            $('.js-result').hide();
             displayPlan();
+            $('#title').val('');
+            $('#transportation').val('');
+            $('#emergency-money').val('');
+            $('#utilities').val('');
+            $("input[class='accomodation-type']:checked").val('');
+            $('.acommodation-value').val('');
+            $('#food-frequency').val('');
+            $('#food-per-day').val('');
+            $('#souvenirs').val('');
 
         })
         .fail(function (jqXHR, error, errorThrown) {
+            alert('Input all the values')
             console.log(jqXHR);
             console.log(error);
             console.log(errorThrown);
@@ -246,27 +259,20 @@ $('.js-plan').on('click', '.js-delete-box', function (event) {
 
 
 $(document).ready(function () {
+    //reset the starting location
     //hide the result before user's input
     $('.js-flight-not-found').hide();
     $('.js-summary').hide();
+    $('.thank-you').hide();
     $('.js-result').hide();
+    $('.logo-2').hide();
     //get plan section from database
     displayPlan();
 
     $('.find-deal').submit(function (event) {
         event.preventDefault();
         state = {};
-        //        $("#js-flight").focus();
-        //        window.location.href("/?#js-flight");
-
-        //        $('html, body').animate({
-        //            scrollTop: $('#js-flight').offset().top - 20
-        //        }, 'slow');
-
-        //        $("#js-flight-anchor").scrollTop(0);
-
-        //        $(window).scrollTop(0);
-
+        $('.thank-you').show();
         var cityOrigin = $('.city-origin-select').val();
         var cityOriginArray = cityOrigin.split("_");
         var cityDestination = $('.city-destination-select').val();
@@ -277,21 +283,19 @@ $(document).ready(function () {
         state["returnDate"] = $('.returnDate').val();
         departureDateArray = state["departureDate"].split("/");
         returnDateArray = state["returnDate"].split("/");
-
+        var departureDateYMD = dateConverter(state["departureDate"]);
+        var returnDateYMD = dateConverter(state["returnDate"]);
+        var nights = diffDate(departureDateYMD, returnDateYMD);
+        console.log(nights);
         if (cityOrigin == cityDestination) {
             alert('Origin and destination locations should not be the same');
-        } else if ((departureDateArray[0] == returnDateArray[0]) && (departureDateArray[1] == returnDateArray[1]) && (departureDateArray[2] == returnDateArray[2])) {
+        } else if (nights == 0) {
             alert('Day trip is not fun at all');
         } else if ((departureDateArray[0] > 12) || (returnDateArray[0] > 12) || (returnDateArray[1] > 31) || (departureDateArray[0] > 31)) {
             alert('Insert the correct dates');
-        } else if (departureDateArray[2] > returnDateArray[2]) {
+        } else if (nights < 0) {
             alert('Insert the correct dates');
-        } else if (departureDateArray[0] > returnDateArray[0]) {
-            alert('Insert the correct dates');
-        } else if ((departureDateArray[1] > returnDateArray[1]) && (departureDateArray[0] == returnDateArray[0])) {
-            alert('Insert the correct dates');
-        } else if ((state["departureDate"] == "") || (state["returnDate"] == "")) {
-            alert('input the date');
+
         } else {
             $('.js-result').show();
             callApi(cityOriginArray[3], cityDestinationArray[3], state["departureDate"], state["returnDate"]);
@@ -307,24 +311,13 @@ $(document).ready(function () {
                 state["utilities"] = $('#utilities').val();
                 state["emergencyMoney"] = $('#emergency-money').val();
                 state["transportation"] = $('#transportation').val();
-                state["title"] = $('#title').val();
                 displaySummarySubmit()
-                    //                postPlanToDatabase(state);
-                    //                $('.js-flight-not-found').hide();
-                    //                $('.js-summary').hide();
-                    //                $('.js-result').hide();
-                    //                displayPlan();
-                    //                $('#title').val('');
-                    //                $('#transportation').val('');
-                    //                $('#emergency-money').val('');
-                    //                $('#utilities').val('');
-                    //                $('.city-origin-select').val('');
-                    //                $('.city-destination-select').val();
-                    //                $("input[class='accomodation-type']:checked").val('');
-                    //                $('.acommodation-value').val('');
-                    //                $('#food-frequency').val('');
-                    //                $('#food-per-day').val('');
-                    //                $('#souvenirs').val('');
+                $('.wrapper-background-plan-boxes-summary').submit(function (event) {
+                    event.preventDefault();
+                    state["title"] = $('#title').val();
+                    postPlanToDatabase(state);
+                });
+
             });
 
         }

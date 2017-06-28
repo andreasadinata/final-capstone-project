@@ -51,17 +51,21 @@ li {
     text-align: center;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 
 /*user input homepage*/
 
 .wrapper-home {
-    background-image: url(transparent.jpg);
+    background-image: url(images/transparent.jpg);
     background-size: cover;
-    /*    opacity: 0.9;*/
+    opacity: 0.9;
 }
 
 .transparent {
-    background-image: url(Gilad-Rom5.jpg);
+    background-image: url(images/22466.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 30% 20%;
@@ -69,10 +73,20 @@ li {
     opacity: 0.9;
 }
 
-.logo {
+.logo-1 {
     font-family: Permanent Marker;
     font-size: 90px;
     color: white;
+}
+
+.logo-2 {
+    font-family: Permanent Marker;
+    font-size: 80px;
+    color: white;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    margin-right: 10%;
 }
 
 .mirror {
@@ -84,13 +98,18 @@ li {
 }
 
 #user-input {
-    height: 620px;
+    height: 530px;
     padding-top: 30px;
     /*    border: 1px solid black;*/
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     color: white;
+}
+
+.submit-effect {
+    width: 100%;
+    display: inline-block;
 }
 
 .city-origin-select .city-destination-select {
@@ -117,8 +136,21 @@ li {
     width: 30%;
     text-align: center;
     vertical-align: center;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 1%;
+}
+
+.input-boxing-last-row {
+    list-style: none;
+    display: inline-block;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    vertical-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
     padding: 1%;
 }
 
@@ -149,6 +181,13 @@ li {
     cursor: pointer;
     color: white;
     margin-top: 30px;
+}
+
+.last-row {
+    margin-top: 10px;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
 }
 
 .js-flight-not-found {
@@ -183,7 +222,7 @@ li {
 }
 
 .js-people-plan {
-    padding-top: 70px;
+    padding-top: 40px;
     /*    border: 1px solid black;*/
     height: 600px;
     width: 80%;
@@ -197,7 +236,7 @@ li {
 }
 
 .wrapper-background-plan-boxes {
-    background-image: url(transparent.jpg);
+    background-image: url(images/transparent.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: inherit;
@@ -207,7 +246,6 @@ li {
 .js-plan-boxes-2,
 .js-plan-boxes-1,
 .js-plan-boxes-0 {
-    background-image: url(sf.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 30% 20%;
@@ -223,15 +261,15 @@ li {
 }
 
 .js-plan-boxes-2 {
-    background-image: url(sf.gif);
+    background-image: url(images/sf.gif);
 }
 
 .js-plan-boxes-1 {
-    background-image: url(travel-road-highway-animated-gif-1.gif);
+    background-image: url(images/travel-road-highway-animated-gif-1.gif);
 }
 
 .js-plan-boxes-0 {
-    background-image: url(tumblr_mwqi6lEfo31r2afqho1_r1_500.gif);
+    background-image: url(images/tumblr_mwqi6lEfo31r2afqho1_r1_500.gif);
 }
 
 .plan-box-title {
@@ -318,7 +356,7 @@ li {
     border-radius: 3px;
     /*    padding-top: 40px;*/
     height: 300px;
-    background-image: url(70403300-airport-wallpapers.jpg);
+    background-image: url(images/70403300-airport-wallpapers.jpg);
     background-position: 30% 20%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -329,7 +367,7 @@ li {
 
 .js-flight-wrapper-transp {
     padding-top: 40px;
-    background-image: url(transparent.jpg);
+    background-image: url(images/transparent.jpg);
     height: 300px;
     color: white;
 }
@@ -391,12 +429,12 @@ li {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(transparent.jpg);
+    background-image: url(images/transparent.jpg);
     color: white;
 }
 
 .layer-accomodation-input-transp {
-    background-image: url(39d45f7f902c3f8fade020257209284a.jpg);
+    background-image: url(images/39d45f7f902c3f8fade020257209284a.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 20% 50%;
@@ -426,6 +464,7 @@ li {
     margin-bottom: 25px;
     border: 0.5px solid black;
     border-radius: 3px;
+    padding: 4px;
 }
 
 
@@ -460,7 +499,7 @@ li {
 .help-chart {
     display: inline-block;
     border: 1px solid white;
-    width: 55%;
+    width: 50%;
     vertical-align: top;
     color: white;
     padding-top: 5px;
@@ -483,7 +522,7 @@ margin-bottom: 10px;
 
 .layer-transp-food,
 .layer-transp-other {
-    background-image: url(transparent.jpg);
+    background-image: url(images/transparent.jpg);
     background-size: cover;
     height: 260px;
     border: 0.5px solid black;
@@ -494,7 +533,7 @@ margin-bottom: 10px;
 }
 
 .food-information {
-    background-image: url(imagefood.jpeg);
+    background-image: url(images/imagefood.jpeg);
     opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
@@ -504,7 +543,7 @@ margin-bottom: 10px;
 }
 
 .other-spend {
-    background-image: url(IMG_97071.jpg);
+    background-image: url(images/IMG_97071.jpg);
     opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
@@ -519,10 +558,12 @@ margin-bottom: 10px;
     width: 41%;
     vertical-align: top;
     color: white;
+    border-radius: 3px;
 }
 
 .input-food input {
     border: 0.5px solid black;
+    border-radius: 3px;
 }
 
 #food-frequency,
@@ -532,7 +573,7 @@ margin-bottom: 10px;
     padding: 2px;
     margin-bottom: 5px;
     border: 1px solid black;
-    border-radius: 1px;
+    border-radius: 3px;
 }
 
 .fa-cutlery,
@@ -571,7 +612,7 @@ margin-bottom: 10px;
 .box-right-other input {
     width: 80%;
     border: 0.5px solid black;
-    border-radius: 1px;
+    border-radius: 3px;
 }
 
 #accomodation-and-foods button {
@@ -594,7 +635,7 @@ margin-bottom: 10px;
 }
 
 .wrapper-background-plan-boxes-summary {
-    background-image: url(transparent.jpg);
+    background-image: url(images/transparent.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: inherit;
@@ -609,7 +650,7 @@ margin-bottom: 10px;
 }
 
 .js-plan-boxes-summary {
-    background-image: url(giphy-2dfvdfv.gif);
+    background-image: url(images/giphy-2dfvdfv.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 30% 20%;
@@ -620,9 +661,10 @@ margin-bottom: 10px;
     height: 320px;
     color: white;
     opacity: 0.9;
+    border-radius: 3px;
 }
 
-.title {
+#title {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 0.5px solid black;
@@ -640,6 +682,37 @@ margin-bottom: 10px;
     padding: 5px!important;
     cursor: pointer;
     color: white;
+}
+
+
+/*thankyou*/
+
+.wrapper-thank-you {
+    background-image: url(images/transparent.jpg);
+    height: 120px;
+    margin-top: 30px;
+    border: 0.1px solid black;
+    border-radius: 3px;
+    font-size: 20px;
+    padding-top: 40px;
+}
+
+.thank-you {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 120px;
+    opacity: 0.9;
+    background-image: url(images/sunrise.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    background-position: 50% 50%;
+    color: white;
+    /*    background-color: black;*/
 }
 
 
@@ -661,11 +734,10 @@ margin-bottom: 10px;
     margin-bottom: 50px;
 }
 
-.why,
-.explanation {
+.why {
     font-size: 18px;
     text-align: left;
-    width: 50%;
+    width: 38%;
     display: inline-block;
     line-height: 300%;
 }
@@ -674,6 +746,14 @@ margin-bottom: 10px;
     margin-left: 40px;
     height: 260px;
     width: 250;
+}
+
+.explanation {
+    font-size: 18px;
+    text-align: right;
+    width: 38%;
+    display: inline-block;
+    line-height: 300%;
 }
 
 
@@ -694,8 +774,8 @@ margin-bottom: 10px;
 }
 
 .image-about {
-    width: 450px;
-    height: 300px;
+    width: 500px;
+    height: 320px;
 }
 
 
@@ -724,12 +804,15 @@ footer div {
 
 .gmail:hover {
     color: darkred;
+    cursor: pointer;
 }
 
 .linkedin:hover {
     color: blue;
+    cursor: pointer;
 }
 
 .github:hover {
     color: rebeccapurple;
+    cursor: pointer;
 }
