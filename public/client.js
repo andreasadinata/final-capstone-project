@@ -272,7 +272,7 @@ $(document).ready(function () {
     $('.find-deal').submit(function (event) {
         event.preventDefault();
         state = {};
-        $('.thank-you').show();
+        $('.thank-you').hide();
         var cityOrigin = $('.city-origin-select').val();
         var cityOriginArray = cityOrigin.split("_");
         var cityDestination = $('.city-destination-select').val();
