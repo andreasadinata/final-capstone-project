@@ -286,7 +286,6 @@ $(document).ready(function () {
         var departureDateYMD = dateConverter(state["departureDate"]);
         var returnDateYMD = dateConverter(state["returnDate"]);
         var nights = diffDate(departureDateYMD, returnDateYMD);
-        console.log(nights);
         if (cityOrigin == cityDestination) {
             alert('Origin and destination locations should not be the same');
         } else if (nights == 0) {

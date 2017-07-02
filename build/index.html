@@ -12,72 +12,48 @@
 </head>
 
 <body>
-    <div class="transparent">
-
-        <section class="wrapper-home">
-
-            <section id="user-input">
-                <h1 class="logo-1">Planit</h1>
-                <h2>Plan your trip with FlightScanner API</h2>
-                <span class="logo-2">Planit</span>
-                <form class="find-deal">
-                    <div class="submit-effect">
-                        <ul class="first-row">
-                            <li class="caption">Origin</li>
-                            <li class="caption">Destination</li>
-                        </ul>
-                        <ul class="middle-top-row">
-                            <li class="input-boxing">
-                                <!--
-                                <i class="fa fa-plane" aria-hidden="true"></i>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
--->
-                                <select class="city-origin-select">
-                                    <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
-                                    <option value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
-                                    <option value="New York_40.7128_-74.0059_NYC">New York</option>
-                                    <option selected="selected" value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
-                                    <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
-                                </select>
-                            </li>
-                            <li class="input-boxing">
-                                <!--
-                                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                                <i class="fa fa-plane mirror" aria-hidden="true"></i>
--->
-                                <select class="city-destination-select">
-                                    <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
-                                    <option selected="selected" value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
-                                    <option value="New York_40.7128_-74.0059_NYC">New York</option>
-                                    <option value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
-                                    <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <ul class="middle-bottom-row">
-                            <li class="input-boxing">
-                                <!--                                <i class="fa fa-calendar" aria-hidden="true"></i> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>-->
-                                <input class="departureDate" required placeholder="Departure Date" type="text" id="datepickerDeparture">
-                            </li>
-                            <li class="input-boxing">
-                                <!--
-                                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-<i class="fa fa-calendar" aria-hidden="true"></i>
--->
-                                <input class="returnDate" required placeholder="Return Date" type="text" id="datepickerReturn">
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="last-row">
-                        <li class="input-boxing-last-row">
-                            <button type="submit" class="submit-find">Let's Go!</button>
-                        </li>
-                    </ul>
-
-                </form>
-            </section>
-        </section>
-    </div>
+    <section id="user-input">
+        <div class="transparent">
+            <div id="logo"></div>
+            <form class="find-deal">
+                <ul class="first-column">
+                    <li class="caption">Origin</li>
+                    <li class="input-boxing">
+                        <select class="city-origin-select">
+                            <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
+                            <option value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
+                            <option value="New York_40.7128_-74.0059_NYC">New York</option>
+                            <option selected="selected" value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
+                            <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
+                        </select>
+                    </li>
+                    <li class="input-boxing">
+                        <input class="departureDate" required placeholder="Departure Date" type="text" id="datepickerDeparture">
+                    </li>
+                </ul>
+                <ul class="second-column">
+                    <li class="caption">Destination</li>
+                    <li class="input-boxing">
+                        <select class="city-destination-select">
+                            <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
+                            <option selected="selected" value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
+                            <option value="New York_40.7128_-74.0059_NYC">New York</option>
+                            <option value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
+                            <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
+                        </select>
+                    </li>
+                    <li class="input-boxing">
+                        <input class="returnDate" required placeholder="Return Date" type="text" id="datepickerReturn">
+                    </li>
+                </ul>
+                <div class="last-row">
+                    <li class="input-boxing-last-row">
+                        <button type="submit" class="submit-find">Let's Go!</button>
+                    </li>
+                </div>
+            </form>
+        </div>
+    </section>
     <section class="js-result" id="js-flight-anchor">
         <section class="js-flight">
             <div class="js-flight-wrapper-transp">
@@ -108,7 +84,6 @@
                 </div>
             </div>
         </section>
-
         <div class="js-flight-not-found">
             <div>We are sorry, we couldnt find any flight during that time</div>
             <button type="button"><a href="#user-input">Change Date</a></button>
@@ -199,8 +174,7 @@
             </ul>
             <button>Enter!!</button>
         </form>
-        <section class="js-summary">
-        </section>
+        <section class="js-summary"></section>
     </section>
     <section class="thank-you">
         <div class="wrapper-thank-you">
@@ -213,22 +187,12 @@
             <section class="js-plan">
             </section>
         </section>
-
-        <section id="why-travel">
-            <h1>Why is travelling important?</h1>
-            <div class="why">Travelling helps people to experience a new culture, make new friends, learn new languages, and most importantly helps people to open their mind. So pack your bags and get ready for the new adventures ahead.</div>
-            <img src="assets/images/Globe-And-Travelling-Icons.png" class="image-why">
-        </section>
-        <section id="about">
-            <h1>About</h1>
-            <img src="assets/images/Image.png" class="image-about">
-            <div class="explanation">PLANIT will guide people to estimate their allowance and help them to research the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
-            </div>
-        </section>
+        <section id="whyTravelReact"></section>
+        <section id="aboutReact"></section>
     </section>
-    <footer id="reactFooter">
+    <footer id="reactFooter"></footer>
 
-    </footer>
+
 
 
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
@@ -245,7 +209,6 @@
         });
     </script>
     <script type="text/javascript" src="assets/client.js"></script>
-
     <script type="text/javascript" src="js/index.js"></script>
 
 </body>

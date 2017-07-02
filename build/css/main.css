@@ -58,13 +58,7 @@ button:hover {
 
 /*user input homepage*/
 
-.wrapper-home {
-    background-image: url(../assets/images/transparent.jpg);
-    background-size: cover;
-    opacity: 0.9;
-}
-
-.transparent {
+#user-input  {
     background-image: url(../assets/images/22466.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,72 +67,51 @@ button:hover {
     opacity: 0.9;
 }
 
-.logo-1 {
+.logo {
     font-family: Permanent Marker;
     font-size: 90px;
     color: white;
 }
 
-.logo-2 {
-    font-family: Permanent Marker;
-    font-size: 80px;
-    color: white;
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-    margin-right: 10%;
-}
-
-.mirror {
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
-}
-
-#user-input {
+.transparent {
     height: 530px;
     padding-top: 30px;
-    /*    border: 1px solid black;*/
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
     color: white;
+    background-image: url(../assets/images/transparent.jpg);
+    background-size: cover;
+    opacity: 0.9;
 }
 
-.submit-effect {
-    width: 100%;
+.first-column,.second-column{
+    width:49%;
     display: inline-block;
+    list-style: none;
+    text-align: center;
 }
+
 
 .city-origin-select .city-destination-select {
     vertical-align: center;
 }
 
 .caption {
-    list-style: none;
-    width: 30%;
-    display: inline-block;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    margin-left: 45px;
-    margin-right: 45px;
-    padding: 1%;
+
 }
 
 .input-boxing {
     list-style: none;
-    display: inline-block;
+    display: block;
     border-left: none;
     border-top: none;
     border-bottom: none;
-    width: 30%;
+    width: 80%;
     text-align: center;
     vertical-align: center;
-    margin-right: 30px;
-    margin-left: 30px;
-    padding: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2%;
 }
 
 .input-boxing-last-row {
@@ -160,7 +133,7 @@ button:hover {
 
 .departureDate,
 .returnDate {
-    width: 100%;
+    width: 70%;
     border-radius: 3px;
     padding-left: 10px;
     height: 27px;
@@ -170,7 +143,7 @@ button:hover {
 
 .city-origin-select,
 .city-destination-select {
-    width: 100%;
+    width: 70%;
 }
 
 .submit-find {
@@ -744,8 +717,8 @@ margin-bottom: 10px;
 
 .image-why {
     margin-left: 40px;
-    height: 260px;
-    width: 450px;
+    height: 240px;
+    width: 530px;
 }
 
 .explanation {
@@ -791,7 +764,7 @@ footer {
     padding-bottom: 20px;
 }
 
-footer div {
+footer div p {
     margin-bottom: 10px;
 }
 
@@ -820,6 +793,7 @@ footer div {
 
 /*responsive*/
 
+/*
 @media only screen and (max-width: 800px) {
     .thank-you div {
         font-size: 15px;
@@ -832,3 +806,4 @@ footer div {
         display: block;
     }
 }
+*/
