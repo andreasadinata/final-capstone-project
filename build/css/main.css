@@ -727,6 +727,8 @@ margin-bottom: 10px;
     width: 38%;
     display: inline-block;
     line-height: 300%;
+    vertical-align: top;
+    margin-top: 10px;
 }
 
 

@@ -14,7 +14,12 @@
 <body>
     <section id="user-input">
         <div class="transparent">
-            <div id="logo"></div>
+            <div id="logo">
+                <div>
+                    <h1 className="logo">Planit</h1>
+                    <h2>Plan your trip with FlightScanner API</h2>
+                </div>
+            </div>
             <form class="find-deal">
                 <ul class="first-column">
                     <li class="caption">Origin</li>
@@ -184,12 +189,35 @@
     <section class="wrapper-bottom">
         <section class="js-people-plan">
             <h1>People's Plan</h1>
-            <section class="js-plan"></section>
+            <section class="js-plan">
+            </section>
         </section>
-        <section id="whyTravelReact"></section>
-        <section id="aboutReact"></section>
+        <section id="whyTravelReact">
+            <section id="why-travel">
+                <h1>Why is travelling important?</h1>
+                <div className="why">Travelling helps people to experience a new culture, make new friends, learn new languages, and most importantly helps people to open their mind. So pack your bags and get ready for the new adventures ahead.</div>
+                <img src="assets/images/Globe-And-Travelling-Icons.png" className="image-why"/>
+            </section>
+        </section>
+        <section id="aboutReact">
+            <section id="about">
+                <h1>About</h1>
+                <img src="assets/images/Image.png" className="image-about"/>
+                <div className="explanation">PLANIT will guide people to estimate their allowance and help them to research the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
+                </div>
+            </section>
+        </section>
     </section>
-    <footer id="reactFooter"></footer>
+    <footer id="reactFooter">
+        <div>
+            <p>Created by Andreas Adinata</p>
+            <ul>
+                <li className="personal-information"><a href="https://github.com/andreasadinata" className="github" target="_blank"><i className="fa fa-github" aria-hidden="true"></i>Github</a></li>
+                <li className="personal-information"><a href="https://www.linkedin.com/in/andreasadinata/" className="linkedin" target="_blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i>Linkedin</a></li>
+                <li className="personal-information"><a href="mailto:adinataandreas@gmail.com" className="gmail" target="_top"><i className="fa fa-envelope" aria-hidden="true"></i>Gmail</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

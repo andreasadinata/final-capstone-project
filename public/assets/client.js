@@ -219,6 +219,7 @@ function displayPlan() {
             url: '/plan/'
         })
         .done(function (result) {
+            console.log(result)
             displayPlanDatabase(result);
         })
         .fail(function (jqXHR, error, errorThrown) {
@@ -267,7 +268,7 @@ $(document).ready(function () {
     $('.js-result').hide();
     $('.logo-2').hide();
     //get plan section from database
-    //displayPlan();
+    displayPlan();
 
     $('.find-deal').submit(function (event) {
         event.preventDefault();
