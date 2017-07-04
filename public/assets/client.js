@@ -66,6 +66,7 @@ function displayPlanDatabase(data) {
         buildHtmlOutput += '<div class="wrapper-background-plan-boxes">'
         buildHtmlOutput += '<input class="hiddenId" type="hidden" value="' + data[backLoop]._id + '">';
         buildHtmlOutput += '<div class="plan-box-title">' + data[backLoop].title + '</div>';
+        buildHtmlOutput += '<div class = "top-container-height">'
         buildHtmlOutput += '<div class="plan-box-total-money">$ ' + totalMoney + '</div>';
         buildHtmlOutput += '<div class="js-flight-plan-boxes">';
         buildHtmlOutput += '<div class="location-left">' + data[backLoop].originLocation + '</div>';
@@ -83,6 +84,7 @@ function displayPlanDatabase(data) {
         buildHtmlOutput += '<div><div class="box-left">Flight</div><div class="box-middle">:</div><div class="box-right"> $' + data[backLoop].flightPrice + '</div></div>';
         buildHtmlOutput += '<div><div class="box-left">Food</div><div class="box-middle">:</div><div class="box-right"> $' + (days * foodMoney) + '</div></div>';
         buildHtmlOutput += '<div><div class="box-left">Other</div><div class="box-middle">:</div><div class="box-right"> $' + otherMoney + '</div></div>';
+        buildHtmlOutput += '</div>';
         buildHtmlOutput += '</div>';
         buildHtmlOutput += '<button class="js-delete-box">Delete</button>';
         buildHtmlOutput += '</div>';
