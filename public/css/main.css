@@ -906,6 +906,9 @@ footer div p {
         margin-left: auto;
         margin-right: auto;
     }
+    #accomodation-and-foods button {
+        width: 20%;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -951,6 +954,12 @@ footer div p {
     }
     .js-flight-button button{
         width: 40%;
+    }
+    .food-information, .other-spend {
+        height: 290px;
+    }
+    .layer-transp-food,.layer-transp-other{
+        height: 290px;
     }
 
 }
@@ -1002,6 +1011,15 @@ footer div p {
     .js-plan-boxes-1,
     .js-plan-boxes-0{
         width: 80%;
+    }
+    .food-information, .other-spend {
+        height: 310px;
+    }
+    .layer-transp-food,.layer-transp-other{
+        height: 310px;
+    }
+    #accomodation-and-foods button {
+        width: 25%;
     }
 
 }
