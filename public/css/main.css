@@ -411,6 +411,12 @@ li {
     color: white;
 }
 
+.accomodation-input-container-80{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .layer-accomodation-input-transp {
     background-image: url(../assets/images/39d45f7f902c3f8fade020257209284a.jpg);
     background-repeat: no-repeat;
@@ -815,6 +821,9 @@ footer div p {
     .personal-information{
         width: 31%;
     }
+    .js-flight-button button{
+        width: 20%;
+    }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -829,6 +838,12 @@ footer div p {
     }
     .image-why{
         width: 75%;
+    }
+    .layer-transp-food,.layer-transp-other{
+        height: 300px;
+    }
+    .food-information, .other-spend{
+        height: 300px;
     }
 }
 
@@ -845,17 +860,28 @@ footer div p {
         width: 80%;
         height: 230px;
     }
+    .js-flight-button button{
+        width: 28%;
+    }
+    .accomodation-type{
+        width: 10%;
+    }
+    .food-information, .other-spend {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 260px;
+    }
+    .layer-transp-food,.layer-transp-other{
+        height: 260px;
+    }
+    .mid-margin {
+        width: 0%;
+    }
 }
 
-@media only screen and (max-width: 875px) {
-    #about{
-        height: 550px;
-    }
-    .image-why{
-        width: 80%;
-        height: 220px;
-    }
-}
 
 @media only screen and (max-width: 795px) {
     #about{
@@ -898,6 +924,9 @@ footer div p {
         margin-left: auto;
         margin-right: auto;
     }
+    .js-flight-button button{
+        width: 32%;
+    }
 
 }
 
@@ -920,6 +949,9 @@ footer div p {
         width: 90%;
         height: 200px;
     }
+    .js-flight-button button{
+        width: 40%;
+    }
 
 }
 @media only screen and (max-width: 495px) {
@@ -939,6 +971,17 @@ footer div p {
     .input-boxing{
         width: 100%;
     }
+    .js-flight{
+        height: 350px;
+        width: 400px;
+    }
+    .js-flight-button button{
+        width: 45%;
+    }
+    .accomodation-value{
+        width: 50%;
+    }
+
 
 }
 @media only screen and (max-width: 440px) {

@@ -199,7 +199,7 @@ function postPlanToDatabase(state) {
             $('#emergency-money').val('');
             $('#utilities').val('');
             $("input[class='accomodation-type']:checked").val('');
-            $('.acommodation-value').val('');
+            $('.accomodation-value').val('');
             $('#food-frequency').val('');
             $('#food-per-day').val('');
             $('#souvenirs').val('');
@@ -306,7 +306,7 @@ $(document).ready(function () {
                 event.preventDefault();
                 $('.js-summary').show();
                 state["roomType"] = $("input[class='accomodation-type']:checked").val();
-                state["roomPrice"] = $('.acommodation-value').val();
+                state["roomPrice"] = $('.accomodation-value').val();
                 state["foodFrequency"] = $('#food-frequency').val();
                 state["foodPrice"] = $('#food-per-day').val();
                 state["souvenirs"] = $('#souvenirs').val();
