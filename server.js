@@ -61,14 +61,7 @@ function closeServer() {
 //use emitter to get data from external API
 function getData(originLocation, destinationLocation, departureDate, returnDate) {
     //convert date to external API format
-    console.log(departureDate);
-    console.log(returnDate);
-    //    var dateDepartureArrayContainer = departureDate.split('/');
-    //    var dateReturnArrayContainer = departureDate.split('/');
-    //    var newDateDeparture = dateDepartureArrayContainer[3] + "/" + dateDepartureArrayContainer[1] + "/" + dateDepartureArrayContainer[2];
-    //    var newDateReturn = dateReturnArrayContainer[3] + "/" + dateReturnArrayContainer[1] + "/" + dateReturnArrayContainer[2];
-    //    console.log(newDateDeparture);
-    //    console.log(newDateReturn);
+
     var emitter = new events.EventEmitter();
 
     unirest.get('http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/US/usd/en-US/' + originLocation + '/' + destinationLocation + '/' + departureDate + '/' + returnDate + '?apikey=prtl6749387986743898559646983194')
