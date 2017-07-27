@@ -13,7 +13,6 @@ function diffDate(departureDate, returnDate) {
 
 //render summary
 function displaySummarySubmit() {
-    console.log(state);
     var buildHtmlOutput = "";
     var departureDateYMD = dateConverter(state["departureDate"]);
     var returnDateYMD = dateConverter(state["returnDate"]);
@@ -96,7 +95,6 @@ function displayPlanDatabase(data) {
 }
 //render external flight api call
 function displayFlightResults(originLocation, destinationLocation, externalData) {
-    console.log(externalData);
     var currentQuotesObject = -1;
     var buildHtmlOutput = "";
     for (var i = 0; i < externalData.Quotes.length; i++) {
@@ -180,7 +178,7 @@ function callApi(originLocation, destinationLocation, departureDate, returnDate)
 }
 //post api call to server and database
 function postPlanToDatabase(state) {
-    console.log(state);
+
     $.ajax({
             type: "POST",
             dataType: "json",
@@ -199,7 +197,7 @@ function postPlanToDatabase(state) {
             $('#emergency-money').val('');
             $('#utilities').val('');
             $("input[class='accomodation-type']:checked").val('');
-            $('.acommodation-value').val('');
+            $('.accomodation-value').val('');
             $('#food-frequency').val('');
             $('#food-per-day').val('');
             $('#souvenirs').val('');
@@ -221,7 +219,7 @@ function displayPlan() {
             url: '/plan/'
         })
         .done(function (result) {
-            console.log(result)
+
             displayPlanDatabase(result);
         })
         .fail(function (jqXHR, error, errorThrown) {
@@ -253,9 +251,7 @@ function deleteData(DeleteId) {
 $('.js-plan').on('click', '.js-delete-box', function (event) {
     //if the page refreshes when you submit the form use "preventDefault()" to force JavaScript to handle the form submission
     event.preventDefault();
-    console.log("inside the deleteBox trigger");
     var IdToBeDeleted = $(this).parent().find('.hiddenId').val();
-    console.log(IdToBeDeleted);
     deleteData(IdToBeDeleted);
 
 });
@@ -306,7 +302,7 @@ $(document).ready(function () {
                 event.preventDefault();
                 $('.js-summary').show();
                 state["roomType"] = $("input[class='accomodation-type']:checked").val();
-                state["roomPrice"] = $('.acommodation-value').val();
+                state["roomPrice"] = $('.accomodation-value').val();
                 state["foodFrequency"] = $('#food-frequency').val();
                 state["foodPrice"] = $('#food-per-day').val();
                 state["souvenirs"] = $('#souvenirs').val();

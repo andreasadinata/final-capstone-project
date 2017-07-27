@@ -21,6 +21,12 @@
     /*    border: 1px solid grey;*/
 }
 
+.maxwidth {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -58,7 +64,7 @@ button:hover {
 
 /*user input homepage*/
 
-#user-input  {
+#user-input {
     background-image: url(../assets/images/22466.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,21 +90,19 @@ button:hover {
     opacity: 0.9;
 }
 
-.first-column,.second-column{
-    width:49%;
+.first-column,
+.second-column {
+    width: 49%;
     display: inline-block;
     list-style: none;
     text-align: center;
 }
 
-
 .city-origin-select .city-destination-select {
     vertical-align: center;
 }
 
-.caption {
-
-}
+.caption {}
 
 .input-boxing {
     list-style: none;
@@ -246,7 +250,7 @@ button:hover {
     background-image: url(../assets/images/tumblr_mwqi6lEfo31r2afqho1_r1_500.gif);
 }
 
-.top-container-height{
+.top-container-height {
     height: 265px;
 }
 
@@ -409,6 +413,12 @@ li {
     margin-right: auto;
     background-image: url(../assets/images/transparent.jpg);
     color: white;
+}
+
+.accomodation-input-container-80 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .layer-accomodation-input-transp {
@@ -805,161 +815,237 @@ footer div p {
         width: 100%;
         display: inline-block;
     }
-    .image-why{
+    .image-why {
         width: 60%;
         margin-left: 0px;
     }
-    #why-travel{
+    #why-travel {
         height: 350px;
     }
-    .personal-information{
+    .personal-information {
         width: 31%;
+    }
+    .js-flight-button button {
+        width: 20%;
     }
 }
 
 @media only screen and (max-width: 1050px) {
     .js-plan-boxes-2,
     .js-plan-boxes-1,
-    .js-plan-boxes-0{
+    .js-plan-boxes-0 {
         width: 60%;
     }
-
-    .js-people-plan{
+    .js-people-plan {
         height: 1400px;
     }
-    .image-why{
+    .image-why {
         width: 75%;
+    }
+    .layer-transp-food,
+    .layer-transp-other {
+        height: 300px;
+    }
+    .food-information,
+    .other-spend {
+        height: 300px;
     }
 }
 
-
 @media only screen and (max-width: 875px) {
-    #why-travel{
+    #why-travel {
         height: 400px;
     }
-
-    #about{
+    #about {
         height: 550px;
     }
-    .image-why{
+    .image-why {
         width: 80%;
         height: 230px;
     }
-}
-
-@media only screen and (max-width: 875px) {
-    #about{
-        height: 550px;
+    .js-flight-button button {
+        width: 28%;
     }
-    .image-why{
-        width: 80%;
-        height: 220px;
+    .accomodation-type {
+        width: 10%;
+    }
+    .food-information,
+    .other-spend {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 260px;
+    }
+    .layer-transp-food,
+    .layer-transp-other {
+        height: 260px;
+    }
+    .mid-margin {
+        width: 0%;
     }
 }
 
 @media only screen and (max-width: 795px) {
-    #about{
+    #about {
         height: 700px;
         width: 80%;
     }
-    .image-why{
+    .image-why {
         width: 90%;
         height: 210px;
     }
-
-    .image-about{
+    .image-about {
         display: block;
         width: 85%;
         margin-left: auto;
         margin-right: auto;
     }
-    .explanation{
+    .explanation {
         width: 100%;
         text-align: left;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+    #accomodation-and-foods button {
+        width: 20%;
+    }
 }
 
 @media only screen and (max-width: 640px) {
-    #why-travel{
+    #why-travel {
         height: 450px;
         width: 80%;
     }
-    .image-why{
+    .image-why {
         width: 100%;
         height: 200px;
     }
-
-    .image-about{
+    .image-about {
         display: block;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
-
+    .js-flight-button button {
+        width: 32%;
+    }
 }
 
 @media only screen and (max-width: 595px) {
-    #why-travel{
+    #why-travel {
         height: 500px;
         width: 80%;
     }
-    .image-why{
+    .image-why {
         width: 100%;
         height: 200px;
     }
-    #about{
+    #about {
         height: 800px;
         width: 80%;
     }
-
-    .image-about{
+    .image-about {
         display: block;
         width: 90%;
         height: 200px;
     }
-
+    .js-flight-button button {
+        width: 40%;
+    }
+    .food-information,
+    .other-spend {
+        height: 290px;
+    }
+    .layer-transp-food,
+    .layer-transp-other {
+        height: 290px;
+    }
 }
+
 @media only screen and (max-width: 495px) {
-    #why-travel{
+    #why-travel {
         height: 530px;
     }
-    .image-why{
+    .image-why {
         width: 100%;
         height: 170px;
     }
-
-    .image-about{
+    .image-about {
         display: block;
         width: 90%;
         height: 200px;
     }
-    .input-boxing{
+    .input-boxing {
         width: 100%;
     }
-
+    .js-flight {
+        height: 350px;
+        width: 400px;
+    }
+    .js-flight-button button {
+        width: 45%;
+    }
+    .accomodation-value {
+        width: 50%;
+    }
 }
+
 @media only screen and (max-width: 440px) {
-    #why-travel{
+    #why-travel {
         height: 530px;
     }
-    .image-why{
+    .image-why {
         width: 100%;
         height: 150px;
     }
-
-    .image-about{
+    .image-about {
         display: block;
         width: 95%;
         height: 180px;
     }
     .js-plan-boxes-2,
     .js-plan-boxes-1,
-    .js-plan-boxes-0{
+    .js-plan-boxes-0 {
         width: 80%;
     }
-
+    .food-information,
+    .other-spend {
+        height: 310px;
+    }
+    .layer-transp-food,
+    .layer-transp-other {
+        height: 310px;
+    }
+    #accomodation-and-foods button {
+        width: 25%;
+    }
 }
 
+@media only screen and (min-width: 1600px) {
+    .js-plan-boxes-2,
+    .js-plan-boxes-1,
+    .js-plan-boxes-0,
+    .wrapper-background-plan-boxes {
+        height: 500px;
+    }
+    .plan-box-title {
+        padding-top: 40px;
+        font-size: 30px;
+    }
+    .plan-box-total-money {
+        margin-bottom: 10px;
+        font-size: 45px
+    }
+    .js-date-plan-boxes,
+    .js-flight-plan-boxes,
+    .location-left,
+    .location-right {
+        font-size: 25px;
+    }
+    .js-delete-box {
+        margin-top: 54px;
+    }
+}

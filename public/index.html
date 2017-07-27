@@ -14,207 +14,215 @@
 <body>
     <section id="user-input">
         <div class="transparent">
-            <div id="logo">
-                <div>
-                    <h1 class="logo">Planit</h1>
-                    <h2>Plan your trip with FlightScanner API</h2>
+            <div class="maxwidth">
+                <div id="logo">
+                    <div>
+                        <h1 class="logo">Planit</h1>
+                        <h2>Plan your trip with FlightScanner API</h2>
+                    </div>
                 </div>
+                <form class="find-deal">
+                    <ul class="first-column">
+                        <li class="caption">Origin</li>
+                        <li class="input-boxing">
+                            <select class="city-origin-select">
+                                <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
+                                <option value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
+                                <option value="New York_40.7128_-74.0059_NYC">New York</option>
+                                <option selected="selected" value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
+                                <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
+                            </select>
+                        </li>
+                        <li class="input-boxing">
+                            <input class="departureDate" required placeholder="Departure Date" type="text" id="datepickerDeparture">
+                        </li>
+                    </ul>
+                    <ul class="second-column">
+                        <li class="caption">Destination</li>
+                        <li class="input-boxing">
+                            <select class="city-destination-select">
+                                <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
+                                <option selected="selected" value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
+                                <option value="New York_40.7128_-74.0059_NYC">New York</option>
+                                <option value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
+                                <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
+                            </select>
+                        </li>
+                        <li class="input-boxing">
+                            <input class="returnDate" required placeholder="Return Date" type="text" id="datepickerReturn">
+                        </li>
+                    </ul>
+                    <div class="last-row">
+                        <li class="input-boxing-last-row">
+                            <button type="submit" class="submit-find">Let's Go!</button>
+                        </li>
+                    </div>
+                </form>
             </div>
-            <form class="find-deal">
-                <ul class="first-column">
-                    <li class="caption">Origin</li>
-                    <li class="input-boxing">
-                        <select class="city-origin-select">
-                            <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
-                            <option value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
-                            <option value="New York_40.7128_-74.0059_NYC">New York</option>
-                            <option selected="selected" value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
-                            <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
-                        </select>
-                    </li>
-                    <li class="input-boxing">
-                        <input class="departureDate" required placeholder="Departure Date" type="text" id="datepickerDeparture">
-                    </li>
-                </ul>
-                <ul class="second-column">
-                    <li class="caption">Destination</li>
-                    <li class="input-boxing">
-                        <select class="city-destination-select">
-                            <option value="Chicago_41.8781_-87.6298_CHI">Chicago</option>
-                            <option selected="selected" value="Los Angeles_34.052235_-118.243683_LAX">Los Angeles</option>
-                            <option value="New York_40.7128_-74.0059_NYC">New York</option>
-                            <option value="San Francisco_37.773972_-122.431297_SFO">San Francisco</option>
-                            <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
-                        </select>
-                    </li>
-                    <li class="input-boxing">
-                        <input class="returnDate" required placeholder="Return Date" type="text" id="datepickerReturn">
-                    </li>
-                </ul>
-                <div class="last-row">
-                    <li class="input-boxing-last-row">
-                        <button type="submit" class="submit-find">Let's Go!</button>
-                    </li>
-                </div>
-            </form>
         </div>
     </section>
     <section class="js-result" id="js-flight-anchor">
-        <section class="js-flight">
-            <div class="js-flight-wrapper-transp">
-                <h2>Choose your flight</h2>
-                <div class="js-table-flight">
-                    <ul>
-                        <li class="flight-format">
-                            Price ($)
-                        </li>
-                        <li class="flight-format">
-                            Departure Flight
-                        </li>
-                        <li class="flight-format">
-                            From
-                        </li>
-                        <li class="flight-format">
-                            Returning Flight
-                        </li>
-                        <li class="flight-format">
-                            From
-                        </li>
-                    </ul>
-                    <ul class="js-find-flight-result"></ul>
-                </div>
-                <div class="js-flight-button">
-                    <button type="button" class="continue"><a class="a-exclude" href="#accomodation-and-foods">Continue</a></button>
-                    <button type="button" class="change-date"><a class="a-exclude" href="#user-input">Change Date</a></button>
-                </div>
-            </div>
-        </section>
-        <div class="js-flight-not-found">
-            <div>We are sorry, we couldnt find any flight during that time</div>
-            <button type="button"><a href="#user-input">Change Date</a></button>
-        </div>
-        <form id="accomodation-and-foods">
-            <div class="hotel-widget"></div>
-            <div class="layer-accomodation-input-transp">
-                <div class="accomodation-input">
-                   <div class="accomodation-input-container-80">
-                    <h1 class="question-1">Where are you going to stay?</h1>
-                    <input class="accomodation-type" type="radio" name="accomodation" value="AirBnB" checked> AirBnB
-                    <input class="accomodation-type" type="radio" name="accomodation" value="Hotel"> Hotel
-                    <input class="accomodation-type" type="radio" name="accomodation" value="Apartment"> Apartment
-                    <input class="accomodation-type" type="radio" name="accomodation" value="Townhouse"> Townhouse
-                    <input class="accomodation-type" type="radio" name="accomodation" value="Shared Room"> Shared Room
-                    <div class="question-2">How much are you going to pay?</div>
-                    <span>$</span>
-                    <input type="number" min="0" required placeholder="Cost" class="accomodation-value"><span>/night</span>
-                    </div>
-                </div>
-            </div>
-            <ul class="acc-food-wrapper">
-                <li class="food-information">
-                    <div class="layer-transp-food">
-                        <h1>How Foodie Are You?</h1>
+        <div class="maxwidth">
+            <section class="js-flight">
+                <div class="js-flight-wrapper-transp">
+                    <h2>Choose your flight</h2>
+                    <div class="js-table-flight">
                         <ul>
-                            <li class="help-chart">
-                                <h1>Guide</h1>
-                                <div>7x a day, Food is life!!</div>
-                                <div>5x a day, Foodie!!</div>
-                                <div>3x a day, Normal Person.</div>
-                                <div>1x a day, Really?</div>
+                            <li class="flight-format">
+                                Price ($)
                             </li>
-                            <li class="input-food">
-                                <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                <span>$</span>
-                                <input type="number" required placeholder="Food Price" id="food-per-day" min="0">
-                                <i class="fa fa-calculator" aria-hidden="true"></i>
-                                <span>X</span>
-                                <input type="number" required placeholder="/day" id="food-frequency" min="0">
+                            <li class="flight-format">
+                                Departure Flight
+                            </li>
+                            <li class="flight-format">
+                                From
+                            </li>
+                            <li class="flight-format">
+                                Returning Flight
+                            </li>
+                            <li class="flight-format">
+                                From
                             </li>
                         </ul>
+                        <ul class="js-find-flight-result"></ul>
                     </div>
-                </li>
-                <li class="mid-margin"></li>
-                <li class="other-spend">
-                    <div class="layer-transp-other">
-                        <h1 class="Other">Transportation and Other Spending</h1>
-                        <div class="js-breakdown-plan-boxes">
+                    <div class="js-flight-button">
+                        <button type="button" class="continue"><a class="a-exclude" href="#accomodation-and-foods">Continue</a></button>
+                        <button type="button" class="change-date"><a class="a-exclude" href="#user-input">Change Date</a></button>
+                    </div>
+                </div>
+            </section>
+            <div class="js-flight-not-found">
+                <div>We are sorry, we couldnt find any flight during that time</div>
+                <button type="button"><a href="#user-input">Change Date</a></button>
+            </div>
+            <form id="accomodation-and-foods">
+                <div class="hotel-widget"></div>
+                <div class="layer-accomodation-input-transp">
+                    <div class="accomodation-input">
+                        <div class="accomodation-input-container-80">
+                            <h1 class="question-1">Where are you going to stay?</h1>
+                            <input class="accomodation-type" type="radio" name="accomodation" value="AirBnB" checked> AirBnB
+                            <input class="accomodation-type" type="radio" name="accomodation" value="Hotel"> Hotel
+                            <input class="accomodation-type" type="radio" name="accomodation" value="Apartment"> Apartment
+                            <input class="accomodation-type" type="radio" name="accomodation" value="Townhouse"> Townhouse
+                            <input class="accomodation-type" type="radio" name="accomodation" value="Shared Room"> Shared Room
+                            <div class="question-2">How much are you going to pay?</div>
+                            <span>$</span>
+                            <input type="number" min="0" required placeholder="Cost" class="accomodation-value"><span>/night</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="acc-food-wrapper">
+                    <li class="food-information">
+                        <div class="layer-transp-food">
+                            <h1>How Foodie Are You?</h1>
                             <ul>
-                                <li class="box-left-other"><i class="fa fa-train" aria-hidden="true"></i>
-                                    <i class="fa fa-bus" aria-hidden="true"></i>
-                                    <i class="fa fa-ship" aria-hidden="true"></i></li>
-                                <li class="box-middle-other">:</li>
-                                <li class="box-right-other">$
-                                    <input type="number" required placeholder=" Transportation" id="transportation" min="0">
+                                <li class="help-chart">
+                                    <h1>Guide</h1>
+                                    <div>7x a day, Food is life!!</div>
+                                    <div>5x a day, Foodie!!</div>
+                                    <div>3x a day, Normal Person.</div>
+                                    <div>1x a day, Really?</div>
                                 </li>
-                            </ul>
-                            <ul>
-                                <li class="box-left-other"><i class="fa fa-tint" aria-hidden="true"></i>
-                                    <i class="fa fa-music" aria-hidden="true"></i>
-                                    <i class="fa fa-gamepad" aria-hidden="true"></i></li>
-                                <li class="box-middle-other">:</li>
-                                <li class="box-right-other">$
-                                    <input type="number" required placeholder=" Utilities" id="utilities" min="0">
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="box-left-other">
-                                    <i class="fa fa-ambulance" aria-hidden="true"></i>
-                                    <i class="fa fa-money" aria-hidden="true"></i>
-                                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i></li>
-                                <li class="box-middle-other">:</li>
-                                <li class="box-right-other">$
-                                    <input type="number" required placeholder=" Emergency Money" id="emergency-money" min="0">
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="box-left-other"><i class="fa fa-gift" aria-hidden="true"></i>
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-                                <li class="box-middle-other">:</li>
-                                <li class="box-right-other">$
-                                    <input type="number" required placeholder=" Souvenirs" id="souvenirs" min="0">
+                                <li class="input-food">
+                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                    <span>$</span>
+                                    <input type="number" required placeholder="Food Price" id="food-per-day" min="0">
+                                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                                    <span>X</span>
+                                    <input type="number" required placeholder="/day" id="food-frequency" min="0">
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </li>
-            </ul>
-            <button>Enter!!</button>
-        </form>
-        <section class="js-summary"></section>
+                    </li>
+                    <li class="mid-margin"></li>
+                    <li class="other-spend">
+                        <div class="layer-transp-other">
+                            <h1 class="Other">Transportation and Other Spending</h1>
+                            <div class="js-breakdown-plan-boxes">
+                                <ul>
+                                    <li class="box-left-other"><i class="fa fa-train" aria-hidden="true"></i>
+                                        <i class="fa fa-bus" aria-hidden="true"></i>
+                                        <i class="fa fa-ship" aria-hidden="true"></i></li>
+                                    <li class="box-middle-other">:</li>
+                                    <li class="box-right-other">$
+                                        <input type="number" required placeholder=" Transportation" id="transportation" min="0">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="box-left-other"><i class="fa fa-tint" aria-hidden="true"></i>
+                                        <i class="fa fa-music" aria-hidden="true"></i>
+                                        <i class="fa fa-gamepad" aria-hidden="true"></i></li>
+                                    <li class="box-middle-other">:</li>
+                                    <li class="box-right-other">$
+                                        <input type="number" required placeholder=" Utilities" id="utilities" min="0">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="box-left-other">
+                                        <i class="fa fa-ambulance" aria-hidden="true"></i>
+                                        <i class="fa fa-money" aria-hidden="true"></i>
+                                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i></li>
+                                    <li class="box-middle-other">:</li>
+                                    <li class="box-right-other">$
+                                        <input type="number" required placeholder=" Emergency Money" id="emergency-money" min="0">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="box-left-other"><i class="fa fa-gift" aria-hidden="true"></i>
+                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+                                    <li class="box-middle-other">:</li>
+                                    <li class="box-right-other">$
+                                        <input type="number" required placeholder=" Souvenirs" id="souvenirs" min="0">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button>Enter!!</button>
+            </form>
+            <section class="js-summary"></section>
+        </div>
     </section>
     <section class="thank-you">
-        <div class="wrapper-thank-you">
-            Thank you for sharing with us!!
+        <div class="maxwidth">
+            <div class="wrapper-thank-you">
+                Thank you for sharing with us!!
+            </div>
         </div>
     </section>
     <section class="wrapper-bottom">
-        <section class="js-people-plan">
-            <h1>People's Plan</h1>
-            <section class="js-plan">
+        <div class="maxwidth">
+            <section class="js-people-plan">
+                <h1>People's Plan</h1>
+                <section class="js-plan">
+                </section>
             </section>
-        </section>
-        <section id="whyTravelReact">
-            <section id="why-travel">
-                <h1>Why is travelling important?</h1>
-                <div class="why">Travelling helps people to experience a new culture, make new friends, learn new languages, and most importantly helps people to open their mind. So pack your bags and get ready for the new adventures ahead.</div>
-                <img src="assets/images/Globe-And-Travelling-Icons.png" class="image-why"/>
+            <section id="whyTravelReact">
+                <section id="why-travel">
+                    <h1>Why is travelling important?</h1>
+                    <div class="why">Travelling helps people to experience a new culture, make new friends, learn new languages, and most importantly helps people to open their mind. So pack your bags and get ready for the new adventures ahead.</div>
+                    <img src="assets/images/Globe-And-Travelling-Icons.png" class="image-why" />
+                </section>
             </section>
-        </section>
-        <section id="aboutReact">
-            <section id="about">
-                <h1>About</h1>
-                <img src="assets/images/Image.png" class="image-about"/>
-                <div class="explanation">PLANIT will guide people to estimate their allowance and help them to research the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
-                </div>
+            <section id="aboutReact">
+                <section id="about">
+                    <h1>About</h1>
+                    <img src="assets/images/Image.png" class="image-about" />
+                    <div class="explanation">PLANIT will guide people to estimate their allowance and help them to research the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
+                    </div>
+                </section>
             </section>
-        </section>
+        </div>
     </section>
     <footer id="reactFooter">
-        <div>
+        <div class="maxwidth">
             <p>Created by Andreas Adinata</p>
             <ul>
-                <li class="personal-information"><a href="https://github.com/andreasadinata" class="github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>Github</a></li>
+                <li class="personal-information"><a href="https://github.com/andreasadinata" class="github" target="_blank"><i class="fa fa-github" aria-hidden="true"> </i>Github</a></li>
                 <li class="personal-information"><a href="https://www.linkedin.com/in/andreasadinata/" class="linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i>Linkedin</a></li>
                 <li class="personal-information"><a href="mailto:adinataandreas@gmail.com" class="gmail" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i>Gmail</a></li>
             </ul>
