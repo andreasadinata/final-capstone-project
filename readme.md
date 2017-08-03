@@ -35,7 +35,7 @@ This app can be very helpful to guide the user throughout the planning process. 
 their travel plan with the other.
 
 ## Live Site
-You can access the demo here https://final-capstone-project.herokuapp.com/
+You can access the demo here https://planit-travel-calculator.herokuapp.com/
 
 ## Technical
 * The app is built by HTML5, JS, CSS, JQuery, nodeJS and ReactJS.
