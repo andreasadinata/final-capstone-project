@@ -21,12 +21,6 @@
     /*    border: 1px solid grey;*/
 }
 
-.maxwidth {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1600px;
-}
-
 a {
     color: black;
     text-decoration: none;
@@ -68,9 +62,15 @@ button:hover {
     background-image: url(../assets/images/22466.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 30% 20%;
+    background-position: 30% 30%;
     background-attachment: inherit;
     opacity: 0.9;
+}
+
+.maxwidth {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {
@@ -79,8 +79,11 @@ button:hover {
     color: white;
 }
 
+#logo div h2 {
+    margin-bottom: 10px;
+}
+
 .transparent {
-    height: 530px;
     padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -102,8 +105,6 @@ button:hover {
     vertical-align: center;
 }
 
-.caption {}
-
 .input-boxing {
     list-style: none;
     display: block;
@@ -115,20 +116,13 @@ button:hover {
     vertical-align: center;
     margin-right: auto;
     margin-left: auto;
-    padding: 2%;
+    padding: 1%;
 }
 
-.input-boxing-last-row {
-    list-style: none;
-    display: inline-block;
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-    text-align: center;
-    vertical-align: center;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding: 1%;
+.caption,
+.date-label {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .middle-row {
@@ -157,22 +151,22 @@ button:hover {
     padding: 10px!important;
     cursor: pointer;
     color: white;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 1.1em;
 }
 
-.last-row {
-    margin-top: 10px;
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
+.alert {
+    color: red;
+    font-size: 1.1em;
+    text-shadow: 0px 0px 5px #000;
+    margin-top: 40px;
 }
 
 .js-flight-not-found {
     display: block;
     margin-left: auto;
     margin-top: 30px;
-    /* border: 1px solid black; */
     width: 80%;
     margin-right: auto;
     padding-bottom: 50px;
@@ -190,26 +184,21 @@ button:hover {
     width: 15%;
 }
 
-
-/*People's Plan*/
-
-.wrapper-bottom {
-    width: 100%;
-    /*    background-color: #F2F3F3;*/
-    background-color: white;
-}
-
-.js-people-plan {
-    padding-top: 80px;
+.information {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 80px;
 }
 
+
+/*People's Plan*/
+
+.js-people-plan {}
+
 .js-people-plan h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 30px;
-    margin-bottom: 50px;
 }
 
 .wrapper-background-plan-boxes {
@@ -230,6 +219,8 @@ button:hover {
     border: 0.1px solid black;
     border-radius: 3px;
     width: 32%;
+    max-width: 360px;
+    height: auto;
     display: inline-block;
     margin: 5px;
     color: white;
@@ -342,9 +333,8 @@ button:hover {
 }
 
 .js-flight-wrapper-transp {
-    padding-top: 40px;
+    padding-top: 30px;
     background-image: url(../assets/images/transparent.jpg);
-    height: 300px;
     color: white;
 }
 
@@ -354,6 +344,7 @@ button:hover {
 
 .js-flight-button {
     margin-top: 10px;
+    padding-bottom: 30px;
 }
 
 .js-flight-button button {
@@ -408,6 +399,7 @@ li {
     margin-right: auto;
     background-image: url(../assets/images/transparent.jpg);
     color: white;
+    border-radius: 3px;
 }
 
 .accomodation-input-container-80 {
@@ -425,6 +417,7 @@ li {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 3px;
 }
 
 .question-1 {
@@ -433,7 +426,6 @@ li {
 }
 
 .question-2 {
-    margin-top: 10px;
     margin-bottom: 15px;
 }
 
@@ -465,6 +457,7 @@ li {
     display: inline-block;
     /*    border: 1px solid black;*/
     height: 260px;
+    border-radius: 3px;
 }
 
 .acc-food-wrapper {
@@ -497,14 +490,14 @@ li {
     margin-bottom: 5px;
 }
 
+.help-chart div {
+    font-size: 0.95em;
+}
+
 .layer-transp-food h1,
 .Other {
     color: white;
-    padding-top: 7px;
-    /*
-    margin-top: 10px;
-margin-bottom: 10px;
-*/
+    padding-top: 10px;
 }
 
 .layer-transp-food,
@@ -513,10 +506,11 @@ margin-bottom: 10px;
     background-size: cover;
     height: 260px;
     border: 0.5px solid black;
+    border-radius: 3px;
 }
 
 .layer-transp-food ul {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .food-information {
@@ -705,24 +699,19 @@ margin-bottom: 10px;
 /*why-travel*/
 
 #why-travel {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    padding-top: 10px;
-    margin-top: 30px;
-    margin-bottom: 80px;
 }
 
 #why-travel h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 30px;
-    margin-bottom: 50px;
 }
 
 .why {
     font-size: 24px;
     text-align: left;
-    width: 38%;
+    width: 45%;
     display: inline-block;
     line-height: 150%;
 }
@@ -736,7 +725,7 @@ margin-bottom: 10px;
 .explanation {
     font-size: 24px;
     text-align: right;
-    width: 38%;
+    width: 45%;
     display: inline-block;
     line-height: 150%;
     vertical-align: top;
@@ -747,16 +736,13 @@ margin-bottom: 10px;
 /*about the app*/
 
 #about {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    margin-bottom: 80px;
 }
 
 #about h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 30px;
-    margin-bottom: 50px;
 }
 
 .image-about {
@@ -769,6 +755,7 @@ margin-bottom: 10px;
 /*personal information*/
 
 footer {
+    margin-top: 50px;
     padding-top: 20px;
     width: 100%;
     margin-left: auto;
@@ -788,7 +775,6 @@ footer div p {
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
-    font-size: 0.5em;
 }
 
 .gmail:hover {
@@ -825,9 +811,15 @@ footer div p {
     .box-right {
         font-size: 16px;
     }
+    .radio-button-width-division {
+        width: 32%;
+    }
+    .radio-button-width-division-special {
+        width: 40%;
+    }
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
     .layer-transp-food,
     .layer-transp-other {
         height: 300px;
@@ -845,28 +837,6 @@ footer div p {
     .js-plan-boxes-0 {
         width: 55%;
     }
-    .radio-button-width-division {
-        width: 32%;
-    }
-}
-
-@media only screen and (max-width: 875px) {
-    .food-information,
-    .other-spend {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 260px;
-    }
-    .layer-transp-food,
-    .layer-transp-other {
-        height: 260px;
-    }
-    .mid-margin {
-        width: 0%;
-    }
     .image-about {
         display: block;
         margin-left: auto;
@@ -878,6 +848,31 @@ footer div p {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .food-information,
+    .other-spend {
+        width: 100%;
+        display: block;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .layer-transp-food,
+    .layer-transp-other {
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .mid-margin {
+        width: 0%;
+    }
+    .radio-button-width-division {
+        width: 49%;
+    }
+    .radio-button-width-division-special {
+        width: 100%;
     }
 }
 
@@ -893,31 +888,9 @@ footer div p {
     .js-plan-boxes-0 {
         width: 70%;
     }
-    .radio-button-width-division {
-        width: 49%;
-    }
-    .radio-button-width-division-special {
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 595px) {
-    #about,
-    #why-travel,
-    .js-people-plan {
-        margin-bottom: 50px;
-    }
-    .js-people-plan {
-        padding-top: 50px;
-    }
-    .food-information,
-    .other-spend {
-        height: 290px;
-    }
-    .layer-transp-food,
-    .layer-transp-other {
-        height: 290px;
-    }
     .explanation,
     .why {
         font-size: 18px;
@@ -926,6 +899,28 @@ footer div p {
 }
 
 @media only screen and (max-width: 495px) {
+    .help-chart {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .input-food {
+        width: 70%;
+    }
+    .box-left-other {
+        width: 60%;
+        text-align: center;
+    }
+    .box-middle-other {
+        margin-left: -20px;
+    }
+    .box-right-other {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
     .input-boxing {
         width: 100%;
     }
@@ -940,42 +935,39 @@ footer div p {
     .js-plan-boxes-0 {
         width: 100%;
     }
-}
-
-@media only screen and (max-width: 440px) {
-    .js-plan-boxes-2,
-    .js-plan-boxes-1,
-    .js-plan-boxes-0 {
+    .radio-button-width-division {
         width: 100%;
     }
-    .food-information,
-    .other-spend,
-    .layer-transp-food,
-    .layer-transp-other {
-        height: 310px;
+    .gmail,
+    .linkedin,
+    .github {
+        font-size: 0.7em;
     }
-    .box-right-other {
-        width: 40%;
+    footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
-@media only screen and (min-width: 1600px) {
-    .plan-box-title {
-        font-size: 30px;
+@media only screen and (min-width: 1400px) {
+    .caption,
+    .date-label,
+    {
+        font-size: 1.2em;
     }
-    .plan-box-total-money {
-        margin-bottom: 10px;
-        font-size: 45px
+    .departureDate,
+    .returnDate,
+    city-origin-select,
+    .city-destination-select {
+        font-size: 1.1em;
     }
-    .js-date-plan-boxes,
-    .js-flight-plan-boxes,
-    .location-left,
-    .location-right {
-        font-size: 25px;
+    .logo {
+        font-size: 120px;
     }
-    .why,
-    .explanation {
-        width: 45%;
-        font-size: 26px;
+    #logo div h2 {
+        font-size: 1.1em;
+    }
+    .submit-find {
+        margin-bottom: 70px;
     }
 }

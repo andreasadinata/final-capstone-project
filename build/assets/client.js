@@ -204,7 +204,6 @@ function postPlanToDatabase(state) {
 
         })
         .fail(function (jqXHR, error, errorThrown) {
-            alert('Input all the values')
             console.log(jqXHR);
             console.log(error);
             console.log(errorThrown);
@@ -265,6 +264,7 @@ $(document).ready(function () {
     $('.thank-you').hide();
     $('.js-result').hide();
     $('.logo-2').hide();
+    $('.alert').hide();
     //get plan section from database
     displayPlan();
 
@@ -286,16 +286,18 @@ $(document).ready(function () {
         var returnDateYMD = dateConverter(state["returnDate"]);
         var nights = diffDate(departureDateYMD, returnDateYMD);
         if (cityOrigin == cityDestination) {
-            alert('Origin and destination locations should not be the same');
+            $('.alert').hide();
+            $('.location-alert').show();
         } else if (nights == 0) {
-            alert('Day trip is not fun at all');
-        } else if ((departureDateArray[0] > 12) || (returnDateArray[0] > 12) || (returnDateArray[1] > 31) || (departureDateArray[0] > 31)) {
-            alert('Insert the correct dates');
-        } else if (nights < 0) {
-            alert('Insert the correct dates');
-
+            $('.alert').hide();
+            $('.day-trip-alert').show();
+        } else if ((departureDateArray[0] > 12) || (returnDateArray[0] > 12) || (returnDateArray[1] > 31) || (departureDateArray[0] > 31) || (nights < 0)) {
+            $('.alert').hide();
+            $('.incorrect-date-alert').show();
         } else {
+            $('.processing').show();
             $('.js-result').show();
+            $('.alert').hide();
             callApi(cityOriginArray[3], cityDestinationArray[3], state["departureDate"], state["returnDate"]);
             renderHotelWidget(cityDestinationArray, $('.departureDate').val(), $('.returnDate').val());
             $('#accomodation-and-foods').submit(function (event) {
@@ -320,4 +322,27 @@ $(document).ready(function () {
 
         }
     });
+    //smooth scroll
+    $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        } // End if
+    });
+
 });

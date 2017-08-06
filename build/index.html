@@ -33,6 +33,7 @@
                                 <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
                             </select>
                         </li>
+                        <li class="date-label">Departure Date</li>
                         <li class="input-boxing">
                             <input class="departureDate" required placeholder="Departure Date" type="text" id="datepickerDeparture">
                         </li>
@@ -48,15 +49,22 @@
                                 <option value="Seattle_47.6062_-122.3321_SEA">Seattle</option>
                             </select>
                         </li>
+                        <li class="date-label">Return Date</li>
                         <li class="input-boxing">
                             <input class="returnDate" required placeholder="Return Date" type="text" id="datepickerReturn">
                         </li>
                     </ul>
-                    <div class="last-row">
+                    <ul class="notification">
+                        <li class="location-alert alert">Origin and destination locations should not be the same!!</li>
+                        <li class="day-trip-alert alert">Day trip is not fun at all!! Enter more than one day trip!</li>
+                        <li class="incorrect-date-alert alert">Insert the correct dates!!</li>
+                        <li class="processing alert">Processing <img src="assets/images/loadingAnimation.gif"></li>
+                    </ul>
+                    <ul class="last-row">
                         <li class="input-boxing-last-row">
                             <button type="submit" class="submit-find">Let's Go!</button>
                         </li>
-                    </div>
+                    </ul>
                 </form>
             </div>
         </div>
@@ -102,11 +110,28 @@
                     <div class="accomodation-input">
                         <div class="accomodation-input-container-80">
                             <h1 class="question-1">Where are you going to stay?</h1>
-                            <input class="accomodation-type" type="radio" name="accomodation" value="AirBnB" checked> AirBnB
-                            <input class="accomodation-type" type="radio" name="accomodation" value="Hotel"> Hotel
-                            <input class="accomodation-type" type="radio" name="accomodation" value="Apartment"> Apartment
-                            <input class="accomodation-type" type="radio" name="accomodation" value="Townhouse"> Townhouse
-                            <input class="accomodation-type" type="radio" name="accomodation" value="Shared Room"> Shared Room
+                            <ul>
+                                <li class="radio-button-width-division">
+                                    <input id="AirBnB" class="accomodation-type" type="radio" name="accomodation" value="AirBnB" checked style="margin-right: 0">
+                                    <label for="AirBnB">AirBnB</label>
+                                </li>
+                                <li class="radio-button-width-division">
+                                    <input id="Apartment" class="accomodation-type" type="radio" name="accomodation" value="Apartment" style="margin-right: 0">
+                                    <label for="Apartment">Apartment</label>
+                                </li>
+                                <li class="radio-button-width-division">
+                                    <input id="Hotel" class="accomodation-type" type="radio" name="accomodation" value="Hotel" style="margin-right: 0">
+                                    <label for="Hotel">Hotel</label>
+                                </li>
+                                <li class="radio-button-width-division">
+                                    <input id="Townhouse" class="accomodation-type" type="radio" name="accomodation" value="Townhouse" style="margin-right: 0">
+                                    <label for="Townhouse">Townhouse</label>
+                                </li>
+                                <li class="radio-button-width-division radio-button-width-division-special">
+                                    <input id="Shared Room" class="accomodation-type" type="radio" name="accomodation" value="Shared Room" style="margin-right: 0">
+                                    <label for="Shared Room">Shared Room</label>
+                                </li>
+                            </ul>
                             <div class="question-2">How much are you going to pay?</div>
                             <span>$</span>
                             <input type="number" min="0" required placeholder="Cost" class="accomodation-value"><span>/night</span>
@@ -194,29 +219,27 @@
             </div>
         </div>
     </section>
-    <section class="wrapper-bottom">
-        <div class="maxwidth">
-            <section class="js-people-plan">
-                <h1>People's Plan</h1>
-                <section class="js-plan">
-                </section>
+    <section class="information">
+        <section id="whyTravelReact">
+            <section id="why-travel">
+                <h1>Why is traveling important?</h1>
+                <div class="why">Travelling helps people to experience a new culture, make new friends, learn new languages, open their mind, and most importantly helps people to creates memories for lifetime. So pack your bags and get ready for the new adventures ahead.</div>
+                <img src="assets/images/Globe-And-Travelling-Icons.png" class="image-why" />
             </section>
-            <section id="whyTravelReact">
-                <section id="why-travel">
-                    <h1>Why is travelling important?</h1>
-                    <div class="why">Travelling helps people to experience a new culture, make new friends, learn new languages, and most importantly helps people to open their mind. So pack your bags and get ready for the new adventures ahead.</div>
-                    <img src="assets/images/Globe-And-Travelling-Icons.png" class="image-why" />
-                </section>
+        </section>
+        <section id="aboutReact">
+            <section id="about">
+                <h1>About</h1>
+                <img src="assets/images/Image.png" class="image-about" />
+                <div class="explanation">PLANIT will guide people to estimate their allowance and help them to research the perfect place to travel into. We have several options from the origin and destination based on the FlightScanner API. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
+                </div>
             </section>
-            <section id="aboutReact">
-                <section id="about">
-                    <h1>About</h1>
-                    <img src="assets/images/Image.png" class="image-about" />
-                    <div class="explanation">PLANIT will guide people to estimate their allowance and help them to research the perfect place to travel into. People will only need to put their location and destination, and we are going to help them to find the cheapest accomodation for them.
-                    </div>
-                </section>
+        </section>
+        <section class="js-people-plan">
+            <h1>Other Traveler's Plan</h1>
+            <section class="js-plan">
             </section>
-        </div>
+        </section>
     </section>
     <footer id="reactFooter">
         <div class="maxwidth">
