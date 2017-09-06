@@ -31,58 +31,46 @@ a:visited {
     text-decoration: none;
 }
 
+
+}
 .a-exclude {
     color: white!important;
     text-decoration: none;
 }
-
 .a-exclude:visited {
     color: white!important;
     text-decoration: none;
 }
-
 section {
     text-align: center;
     width: 100%;
 }
-
 li {
     /*    padding: 1%;*/
+
     text-align: center;
 }
-
 button:hover {
     cursor: pointer;
 }
 
-
 /*user input homepage*/
-
 #user-input {
-    background-image: url(../assets/images/22466.jpg);
+    background-image: url(../assets/images/tim-bogdanov-97988.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 30% 30%;
+    background-position: center center;
     background-attachment: inherit;
     opacity: 0.9;
 }
-
-.maxwidth {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .logo {
     font-family: Permanent Marker;
     font-size: 90px;
     color: white;
 }
-
 #logo div h2 {
     margin-bottom: 10px;
 }
-
 .transparent {
     padding-top: 30px;
     margin-left: auto;
@@ -92,7 +80,6 @@ button:hover {
     background-size: cover;
     opacity: 0.9;
 }
-
 .first-column,
 .second-column {
     width: 49%;
@@ -100,11 +87,9 @@ button:hover {
     list-style: none;
     text-align: center;
 }
-
 .city-origin-select .city-destination-select {
     vertical-align: center;
 }
-
 .input-boxing {
     list-style: none;
     display: block;
@@ -118,17 +103,14 @@ button:hover {
     margin-left: auto;
     padding: 1%;
 }
-
 .caption,
 .date-label {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
 .middle-row {
     width: 100%;
 }
-
 .departureDate,
 .returnDate {
     width: 70%;
@@ -138,12 +120,10 @@ button:hover {
     font-size: 16px;
     vertical-align: center;
 }
-
 .city-origin-select,
 .city-destination-select {
     width: 70%;
 }
-
 .submit-find {
     background: none!important;
     border-radius: 3px;
@@ -155,14 +135,12 @@ button:hover {
     margin-bottom: 40px;
     font-size: 1.1em;
 }
-
 .alert {
     color: red;
     font-size: 1.1em;
     text-shadow: 0px 0px 5px #000;
     margin-top: 40px;
 }
-
 .js-flight-not-found {
     display: block;
     margin-left: auto;
@@ -171,7 +149,6 @@ button:hover {
     margin-right: auto;
     padding-bottom: 50px;
 }
-
 .js-flight-not-found button {
     display: inline-block;
     background: none!important;
@@ -183,24 +160,19 @@ button:hover {
     margin-top: 35px;
     width: 15%;
 }
-
 .information {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
-
 /*People's Plan*/
-
 .js-people-plan {}
-
 .js-people-plan h1 {
     padding-top: 50px;
     padding-bottom: 50px;
     font-size: 30px;
 }
-
 .wrapper-background-plan-boxes {
     background-image: url(../assets/images/transparent.jpg);
     background-repeat: no-repeat;
@@ -208,7 +180,6 @@ button:hover {
     background-attachment: inherit;
     border-radius: 3px;
 }
-
 .js-plan-boxes-2,
 .js-plan-boxes-1,
 .js-plan-boxes-0 {
@@ -227,70 +198,57 @@ button:hover {
     opacity: 0.9;
     vertical-align: top;
 }
-
 .js-plan-boxes-2 {
     background-image: url(../assets/images/sf.gif);
 }
-
 .js-plan-boxes-1 {
     background-image: url(../assets/images/travel-road-highway-animated-gif-1.gif);
 }
-
 .js-plan-boxes-0 {
     background-image: url(../assets/images/tumblr_mwqi6lEfo31r2afqho1_r1_500.gif);
 }
-
 .plan-box-title {
     padding-top: 20px;
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
 }
-
 .plan-box-total-money {
     font-size: 30px;
     font-weight: bolder;
 }
-
 .js-date-plan-boxes,
 .js-flight-plan-boxes {
     text-align: center;
 }
-
 .date-js-plan {
     font-size: 13px;
 }
-
 .location-left,
 .location-right {
     width: 40%;
     text-align: center;
     display: inline-block;
 }
-
 .fa {
     margin-left: 5px;
     margin-right: 5px;
 }
-
 .box-left {
     width: 42%;
     text-align: center;
     display: inline-block;
 }
-
 .box-middle {
     width: 5%;
     text-align: center;
     display: inline-block;
 }
-
 .box-right {
     width: 42%;
     text-align: center;
     display: inline-block;
 }
-
 .js-delete-box {
     background: none!important;
     border-radius: 3px;
@@ -302,20 +260,17 @@ button:hover {
     margin-bottom: 20px;
 }
 
-
 /****Result****/
-
 .js-result {
     padding-top: 25px;
     width: 100%;
     /*    background-color: #4996ED;*/
+
     background-color: #F2F3F3;
     margin-bottom: 20px;
 }
 
-
 /*flight result*/
-
 .js-flight {
     width: 80%;
     margin-left: auto;
@@ -331,22 +286,18 @@ button:hover {
     color: white;
     opacity: 0.9;
 }
-
 .js-flight-wrapper-transp {
     padding-top: 30px;
     background-image: url(../assets/images/transparent.jpg);
     color: white;
 }
-
 .js-flight h2 {
     margin-bottom: 30px;
 }
-
 .js-flight-button {
     margin-top: 10px;
     padding-bottom: 30px;
 }
-
 .js-flight-button button {
     display: inline-block;
     background: none!important;
@@ -360,25 +311,20 @@ button:hover {
     margin: 5px;
     min-width: 123px;
 }
-
 .flight-format {
     padding: 1%;
     width: 19%;
     text-align: center;
     display: inline-block;
 }
-
 .padding {
     margin: 0.2%;
 }
-
 li {
     list-style: none;
 }
 
-
 /*stay22*/
-
 #stay22-widget {
     margin-top: 40px;
     margin-left: auto;
@@ -387,9 +333,7 @@ li {
     border: 1px solid black
 }
 
-
 /*accomodation input*/
-
 .accomodation-input {
     margin-top: 30px;
     border: 0.5px solid black;
@@ -401,13 +345,11 @@ li {
     color: white;
     border-radius: 3px;
 }
-
 .accomodation-input-container-80 {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
-
 .layer-accomodation-input-transp {
     background-image: url(../assets/images/39d45f7f902c3f8fade020257209284a.jpg);
     background-repeat: no-repeat;
@@ -419,26 +361,21 @@ li {
     margin-right: auto;
     border-radius: 3px;
 }
-
 .question-1 {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
 .question-2 {
     margin-bottom: 15px;
 }
-
 .radio-button-width-division {
     display: inline-block;
     width: 19.5%;
 }
-
 .accomodation-type {
     display: inline-block;
     text-align: left;
 }
-
 .accomodation-input input {
     margin-bottom: 25px;
     border: 0.5px solid black;
@@ -446,9 +383,7 @@ li {
     padding: 4px;
 }
 
-
 /*transportation and food */
-
 .food-information,
 .other-spend {
     width: 48.57%;
@@ -456,26 +391,23 @@ li {
     vertical-align: top;
     display: inline-block;
     /*    border: 1px solid black;*/
+
     height: 260px;
     border-radius: 3px;
 }
-
 .acc-food-wrapper {
     margin-top: 5px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
-
 .mid-margin {
     width: 1%;
     vertical-align: top;
     display: inline-block;
 }
 
-
 /*food*/
-
 .help-chart {
     display: inline-block;
     border: 1px solid white;
@@ -485,21 +417,17 @@ li {
     padding-top: 5px;
     padding-bottom: 10px;
 }
-
 .help-chart h1 {
     margin-bottom: 5px;
 }
-
 .help-chart div {
     font-size: 0.95em;
 }
-
 .layer-transp-food h1,
 .Other {
     color: white;
     padding-top: 10px;
 }
-
 .layer-transp-food,
 .layer-transp-other {
     background-image: url(../assets/images/transparent.jpg);
@@ -508,11 +436,9 @@ li {
     border: 0.5px solid black;
     border-radius: 3px;
 }
-
 .layer-transp-food ul {
     margin-top: 10px;
 }
-
 .food-information {
     background-image: url(../assets/images/imagefood.jpeg);
     opacity: 0.9;
@@ -522,7 +448,6 @@ li {
     background-attachment: inherit;
     color: white;
 }
-
 .other-spend {
     background-image: url(../assets/images/IMG_97071.jpg);
     opacity: 0.9;
@@ -532,7 +457,6 @@ li {
     background-attachment: inherit;
     color: white;
 }
-
 .input-food {
     border-radius: 3px;
     display: inline-block;
@@ -541,12 +465,10 @@ li {
     color: white;
     border-radius: 3px;
 }
-
 .input-food input {
     border: 0.5px solid black;
     border-radius: 3px;
 }
-
 #food-frequency,
 #food-per-day {
     display: inline-block;
@@ -556,7 +478,6 @@ li {
     border: 1px solid black;
     border-radius: 3px;
 }
-
 .fa-cutlery,
 .fa-calculator {
     display: block;
@@ -564,38 +485,31 @@ li {
     margin-top: 10px;
 }
 
-
 /*transportation*/
-
 .js-breakdown-plan-boxes ul {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 .box-left-other {
     width: 35%;
     text-align: left;
     display: inline-block;
 }
-
 .box-middle-other {
     width: 5%;
     text-align: center;
     display: inline-block;
 }
-
 .box-right-other {
     width: 50%;
     text-align: center;
     display: inline-block;
 }
-
 .box-right-other input {
     width: 80%;
     border: 0.5px solid black;
     border-radius: 3px;
 }
-
 #accomodation-and-foods button {
     background: none!important;
     border-radius: 3px;
@@ -609,13 +523,10 @@ li {
     min-width: 95px;
 }
 
-
 /*summary*/
-
 .js-summary {
     padding-bottom: 50px;
 }
-
 .wrapper-background-plan-boxes-summary {
     background-image: url(../assets/images/transparent.jpg);
     background-repeat: no-repeat;
@@ -624,11 +535,9 @@ li {
     border: 0.1px solid black;
     border-radius: 3px;
 }
-
 .wrapper-background-plan-boxes-summary h1 {
     padding-top: 12px;
 }
-
 .js-plan-boxes-summary {
     background-image: url(../assets/images/giphy-2dfvdfv.gif);
     background-repeat: no-repeat;
@@ -643,14 +552,12 @@ li {
     opacity: 0.9;
     border-radius: 3px;
 }
-
 #title {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 0.5px solid black;
     padding: 5px;
 }
-
 .initiate-post {
     margin-left: auto;
     margin-right: auto;
@@ -665,9 +572,7 @@ li {
     color: white;
 }
 
-
 /*thankyou*/
-
 .wrapper-thank-you {
     background-image: url(../assets/images/transparent.jpg);
     height: 120px;
@@ -677,7 +582,6 @@ li {
     font-size: 20px;
     padding-top: 40px;
 }
-
 .thank-you {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -695,19 +599,15 @@ li {
     color: white;
 }
 
-
 /*why-travel*/
-
 #why-travel {
     text-align: center;
 }
-
 #why-travel h1 {
     padding-top: 50px;
     padding-bottom: 50px;
     font-size: 30px;
 }
-
 .why {
     font-size: 24px;
     text-align: left;
@@ -715,13 +615,11 @@ li {
     display: inline-block;
     line-height: 150%;
 }
-
 .image-why {
     margin-left: 40px;
     min-width: 280px;
     width: 40%;
 }
-
 .explanation {
     font-size: 24px;
     text-align: right;
@@ -732,28 +630,22 @@ li {
     margin-top: 10px;
 }
 
-
 /*about the app*/
-
 #about {
     text-align: center;
 }
-
 #about h1 {
     padding-top: 50px;
     padding-bottom: 50px;
     font-size: 30px;
 }
-
 .image-about {
     width: 40%;
     min-width: 300px;
     max-width: 540px;
 }
 
-
 /*personal information*/
-
 footer {
     margin-top: 50px;
     padding-top: 20px;
@@ -764,84 +656,86 @@ footer {
     background-color: #F2F3F3;
     padding-bottom: 20px;
 }
-
 footer div p {
     margin-bottom: 5px;
 }
-
 .personal-information {
     display: inline-block;
     /*    width: 20%;*/
+
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
 }
-
 .gmail:hover {
     color: #dd4b39;
     cursor: pointer;
 }
-
 .linkedin:hover {
     color: #0077B5;
     cursor: pointer;
 }
-
 .github:hover {
     color: rebeccapurple;
     cursor: pointer;
 }
 
-
 /*responsive*/
-
 @media only screen and (max-width: 1200px) {
     .why {
         width: 100%;
         display: inline-block;
         margin-bottom: 30px;
     }
+
     .image-why {
         width: 65%;
         margin-left: 0px;
     }
+
     .location-left,
     .location-right,
     .box-left,
     .box-right {
         font-size: 16px;
     }
+
     .radio-button-width-division {
         width: 32%;
     }
+
     .radio-button-width-division-special {
         width: 40%;
     }
 }
-
 @media only screen and (max-width: 1060px) {
     .layer-transp-food,
     .layer-transp-other {
         height: 300px;
     }
+
     .food-information,
     .other-spend {
         height: 300px;
     }
+
     .explanation,
     .why {
         font-size: 20px;
     }
+
     .js-plan-boxes-2,
     .js-plan-boxes-1,
     .js-plan-boxes-0 {
         width: 55%;
     }
+
     .image-about {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
     .explanation {
         width: 80%;
         text-align: left;
@@ -850,7 +744,6 @@ footer div p {
         margin-right: auto;
     }
 }
-
 @media only screen and (max-width: 875px) {
     .food-information,
     .other-spend {
@@ -860,22 +753,25 @@ footer div p {
         margin-left: auto;
         margin-right: auto;
     }
+
     .layer-transp-food,
     .layer-transp-other {
         height: auto;
         padding-bottom: 10px;
     }
+
     .mid-margin {
         width: 0%;
     }
+
     .radio-button-width-division {
         width: 49%;
     }
+
     .radio-button-width-division-special {
         width: 100%;
     }
 }
-
 @media only screen and (max-width: 640px) {
     .image-about {
         display: block;
@@ -883,13 +779,13 @@ footer div p {
         margin-left: auto;
         margin-right: auto;
     }
+
     .js-plan-boxes-2,
     .js-plan-boxes-1,
     .js-plan-boxes-0 {
         width: 70%;
     }
 }
-
 @media only screen and (max-width: 595px) {
     .explanation,
     .why {
@@ -897,7 +793,6 @@ footer div p {
         text-align: center;
     }
 }
-
 @media only screen and (max-width: 495px) {
     .help-chart {
         display: block;
@@ -905,68 +800,82 @@ footer div p {
         margin-right: auto;
         width: 80%;
     }
+
     .input-food {
         width: 70%;
     }
+
     .box-left-other {
         width: 60%;
         text-align: center;
     }
+
     .box-middle-other {
         margin-left: -20px;
     }
+
     .box-right-other {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 80%;
     }
+
     .input-boxing {
         width: 100%;
     }
+
     .accomodation-value {
         width: 50%;
     }
+
     .explanation {
         text-align: center;
     }
+
     .js-plan-boxes-2,
     .js-plan-boxes-1,
     .js-plan-boxes-0 {
         width: 100%;
     }
+
     .radio-button-width-division {
         width: 100%;
     }
+
     .gmail,
     .linkedin,
     .github {
         font-size: 0.7em;
     }
+
     footer {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 }
-
 @media only screen and (min-width: 1400px) {
     .caption,
     .date-label,
     {
         font-size: 1.2em;
     }
+
     .departureDate,
     .returnDate,
     city-origin-select,
     .city-destination-select {
         font-size: 1.1em;
     }
+
     .logo {
         font-size: 120px;
     }
+
     #logo div h2 {
         font-size: 1.1em;
     }
+
     .submit-find {
         margin-bottom: 70px;
     }
